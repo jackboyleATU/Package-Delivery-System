@@ -1,12 +1,122 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Team Project\\Package-Delivery-System\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|d:\\team project\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppDBContext.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:53:48.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:43:14.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:45:38.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:43:40.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:45:07.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPackageRepository.cs",
+              "DocumentMoniker": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "ToolTip": "D:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:48:08.929Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

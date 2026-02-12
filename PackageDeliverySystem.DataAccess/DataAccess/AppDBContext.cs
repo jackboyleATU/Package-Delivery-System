@@ -20,7 +20,7 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
         /*
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.seed();
+            base.OnModelCreating(modelBulider);
         }
         */
 
