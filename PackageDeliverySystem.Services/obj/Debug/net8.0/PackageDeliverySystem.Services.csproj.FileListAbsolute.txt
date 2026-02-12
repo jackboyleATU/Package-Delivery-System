@@ -13,3 +13,18 @@ D:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug
 D:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.pdb
 D:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.genruntimeconfig.cache
 D:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\ref\PackageDeliverySystem.Services.dll
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.deps.json
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.runtimeconfig.json
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.dll
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.pdb
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.csproj.AssemblyReference.cache
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.AssemblyInfoInputs.cache
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.AssemblyInfo.cs
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.csproj.CoreCompileInputs.cache
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.sourcelink.json
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.dll
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\refint\PackageDeliverySystem.Services.dll
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.pdb
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.genruntimeconfig.cache
+C:\Users\ethan\OneDrive\TeamProject\Package-Delivery-System\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\ref\PackageDeliverySystem.Services.dll
