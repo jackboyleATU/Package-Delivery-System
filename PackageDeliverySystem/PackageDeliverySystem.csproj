@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Admin\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.24" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.24">
       <PrivateAssets>all</PrivateAssets>
@@ -25,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackageDeliverySystem.DataAccess\PackageDeliverySystem.DataAccess.csproj" />
+    <ProjectReference Include="..\PackageDeliverySystem.Services\PackageDeliverySystem.Services.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1520,6 +1520,22 @@
         "runtime": {
           "bin/placeholder/PackageDeliverySystem.Models.dll": {}
         }
+      },
+      "PackageDeliverySystem.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "8.0.24",
+          "Microsoft.EntityFrameworkCore.SqlServer": "8.0.24",
+          "PackageDeliverySystem.DataAccess": "1.0.0",
+          "PackageDeliverySystem.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PackageDeliverySystem.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PackageDeliverySystem.Services.dll": {}
+        }
       }
     }
   },
@@ -4032,6 +4048,11 @@
       "type": "project",
       "path": "../PackageDeliverySystem.Models/PackageDeliverySystem.Models.csproj",
       "msbuildProject": "../PackageDeliverySystem.Models/PackageDeliverySystem.Models.csproj"
+    },
+    "PackageDeliverySystem.Services/1.0.0": {
+      "type": "project",
+      "path": "../PackageDeliverySystem.Services/PackageDeliverySystem.Services.csproj",
+      "msbuildProject": "../PackageDeliverySystem.Services/PackageDeliverySystem.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4040,27 +4061,28 @@
       "Microsoft.EntityFrameworkCore.Design >= 8.0.24",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.24",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.24",
-      "PackageDeliverySystem.DataAccess >= 1.0.0"
+      "PackageDeliverySystem.DataAccess >= 1.0.0",
+      "PackageDeliverySystem.Services >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\EthanCurran-STUDENT\\.nuget\\packages\\": {},
+    "C:\\Users\\L00166933\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+      "projectUniqueName": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
       "projectName": "PackageDeliverySystem",
-      "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
-      "packagesPath": "C:\\Users\\EthanCurran-STUDENT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
+      "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+      "packagesPath": "C:\\Users\\L00166933\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\EthanCurran-STUDENT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\L00166933\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4076,8 +4098,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+            "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+            },
+            "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj": {
+              "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj"
             }
           }
         }

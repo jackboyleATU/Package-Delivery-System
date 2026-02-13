@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj": {}
+    "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
+    "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj",
         "projectName": "PackageDeliverySystem.DataAccess",
-        "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\EthanCurran-STUDENT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\L00166933\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\EthanCurran-STUDENT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L00166933\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj": {
-                "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj"
+              "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj": {
+                "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj"
               }
             }
           }
@@ -96,20 +96,20 @@
         }
       }
     },
-    "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj": {
+    "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj",
+        "projectUniqueName": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj",
         "projectName": "PackageDeliverySystem.Models",
-        "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj",
-        "packagesPath": "C:\\Users\\EthanCurran-STUDENT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.Models\\obj\\",
+        "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj",
+        "packagesPath": "C:\\Users\\L00166933\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\EthanCurran-STUDENT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L00166933\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -184,20 +184,20 @@
         }
       }
     },
-    "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj": {
+    "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
-        "projectName": "PackageDeliverySystem",
-        "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
-        "packagesPath": "C:\\Users\\EthanCurran-STUDENT\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
+        "projectUniqueName": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj",
+        "projectName": "PackageDeliverySystem.Services",
+        "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj",
+        "packagesPath": "C:\\Users\\L00166933\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\EthanCurran-STUDENT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\L00166933\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -213,8 +213,106 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\EthanCurran-STUDENT\\OneDrive - Atlantic TU\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+              "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+              },
+              "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj": {
+                "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.24, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.24, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.24, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.24, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+        "projectName": "PackageDeliverySystem",
+        "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+        "packagesPath": "C:\\Users\\L00166933\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\L00166933\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+              },
+              "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj": {
+                "projectPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj"
               }
             }
           }
