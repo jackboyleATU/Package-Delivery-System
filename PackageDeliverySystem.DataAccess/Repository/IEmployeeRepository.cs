@@ -9,5 +9,6 @@ namespace PackageDeliverySystem.DataAccess.Repository
 {
     public interface IEmployeeRepository : IRepository<Employee>
     {
+        public void Update(Employee employee );
     }
 }

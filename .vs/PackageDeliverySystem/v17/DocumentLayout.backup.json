@@ -1,82 +1,154 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\",
+  "WorkspaceRootPath": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|solutionrelative:packagedeliverysystem.services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|solutionrelative:packagedeliverysystem.services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|solutionrelative:packagedeliverysystem.services\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{492156E1-3DFD-4A2E-A685-0365A6C5D398}|PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj|solutionrelative:packagedeliverysystem.services\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\dataaccess\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\employees\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\l00166933\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\icustomerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\customerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2B07F2C-A494-42A0-93C1-74D2445BFE38}|PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.models\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2B07F2C-A494-42A0-93C1-74D2445BFE38}|PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj|solutionrelative:packagedeliverysystem.models\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\create.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\delete.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\edit.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\packages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\packages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2B07F2C-A494-42A0-93C1-74D2445BFE38}|PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.models\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2B07F2C-A494-42A0-93C1-74D2445BFE38}|PackageDeliverySystem.Models\\PackageDeliverySystem.Models.csproj|solutionrelative:packagedeliverysystem.models\\models\\package.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8A642F8E-CA89-4BEF-8308-11709DB7000B}|PackageDeliverySystem\\PackageDeliverySystem.csproj|solutionrelative:packagedeliverysystem\\pages\\admin\\customers\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|c:\\users\\franc\\desktop\\package-delivery-system\\packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1357364-6686-4A86-9F61-9BF4736A90D1}|PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj|solutionrelative:packagedeliverysystem.dataaccess\\repository\\ipackagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,106 +158,93 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Delete.cshtml",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-13T11:03:59.162Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 0,
               "Title": "Create.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAwAAAAJAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T11:00:01.597Z",
+              "WhenOpened": "2026-02-19T21:23:34.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:23:32.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
               "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
               "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-02-13T10:59:18.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T10:54:59.22Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml*",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml*",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-13T10:53:16.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
-              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T10:29:06.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\UnitOfWork.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.Services\\UnitOfWork.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\UnitOfWork.cs",
-              "RelativeToolTip": "PackageDeliverySystem.Services\\UnitOfWork.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T10:18:08.762Z",
+              "WhenOpened": "2026-02-13T11:00:01.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T11:04:14.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:34:05.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "IUnitOfWork.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\IUnitOfWork.cs",
               "RelativeDocumentMoniker": "PackageDeliverySystem.Services\\IUnitOfWork.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\IUnitOfWork.cs",
               "RelativeToolTip": "PackageDeliverySystem.Services\\IUnitOfWork.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -194,89 +253,245 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAADEAAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-13T11:22:02.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "EmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
-              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.Services\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\UnitOfWork.cs",
+              "RelativeToolTip": "PackageDeliverySystem.Services\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T16:45:38.373Z",
+              "WhenOpened": "2026-02-13T10:18:08.762Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "AppDBContext.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
               "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
               "RelativeToolTip": "PackageDeliverySystem.DataAccess\\DataAccess\\AppDBContext.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAowIAAAABmAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T16:53:48.034Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Delete.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-13T11:04:14.364Z",
+              "WhenOpened": "2026-02-13T10:54:59.22Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
-              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
-              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-13T11:05:55.965Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "Edit.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
               "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
               "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-13T11:06:07.437Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:20:42.452Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:31:22.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T11:05:55.965Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:19:55.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:30:19.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Employees\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:34:03.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T10:53:16.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ICustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:43:14.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CustomerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:43:40.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:45:07.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T16:45:38.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.Models\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\Models\\Employee.cs",
+              "RelativeToolTip": "PackageDeliverySystem.Models\\Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:22:07.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Create.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:58:34.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:58:33.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Program.cs",
               "RelativeDocumentMoniker": "PackageDeliverySystem\\Program.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Program.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Program.cs",
               "RelativeToolTip": "PackageDeliverySystem\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -285,52 +500,144 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ICustomerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
-              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\ICustomerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T16:43:14.419Z"
+              "DocumentIndex": 26,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:49:12.059Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IEmployeeRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
-              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IEmployeeRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T16:45:07.262Z"
+              "WhenOpened": "2026-02-19T21:36:38.949Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 28,
+              "Title": "Delete.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Delete.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:49:32.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:42:16.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml.cs",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Edit.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:42:46.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Packages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-19T21:36:26.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Package.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\Models\\Package.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.Models\\Models\\Package.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Models\\Models\\Package.cs",
+              "RelativeToolTip": "PackageDeliverySystem.Models\\Models\\Package.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T21:37:29.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Admin\\Customers\\Delete.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T11:03:59.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PackageDeliverySystem\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADMAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-13T11:22:02.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "IRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
+              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
+              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-13T10:29:06.618Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
               "Title": "IPackageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
               "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
+              "ToolTip": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
               "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\IPackageRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T16:48:08.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "CustomerRepository.cs",
-              "DocumentMoniker": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
-              "RelativeDocumentMoniker": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
-              "ToolTip": "C:\\Users\\L00166933\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
-              "RelativeToolTip": "PackageDeliverySystem.DataAccess\\Repository\\CustomerRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-12T16:43:40.906Z",
-              "EditorCaption": ""
             }
           ]
         }
