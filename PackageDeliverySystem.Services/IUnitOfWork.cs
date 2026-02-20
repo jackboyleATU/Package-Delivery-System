@@ -1,5 +1,4 @@
 ﻿using PackageDeliverySystem.DataAccess.Repository;
-using PackageDeliverySystem.Models.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +9,10 @@ namespace PackageDeliverySystem.Services
 {
     public interface IUnitOfWork : IDisposable
     {
-        ICustomerRepository CustomerRepo { get; }
-        IEmployeeRepository EmployeeRepo { get; }
-        IPackageRepository PackageRepo { get; }
-
-        void Save();
+            ICustomerRepository CustomerRepo { get; }
+            IEmployeeRepository EmployeeRepo { get; }
+            IPackageRepository PackageRepo { get; }
+    
+            void Save();
     }
 }

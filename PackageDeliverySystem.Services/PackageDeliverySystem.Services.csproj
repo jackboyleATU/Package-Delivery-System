@@ -21,7 +21,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackageDeliverySystem.DataAccess\PackageDeliverySystem.DataAccess.csproj" />
-    <ProjectReference Include="..\PackageDeliverySystem.Models\PackageDeliverySystem.Models.csproj" />
   </ItemGroup>
 
 </Project>

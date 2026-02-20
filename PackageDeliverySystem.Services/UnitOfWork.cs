@@ -24,14 +24,14 @@ namespace PackageDeliverySystem.Services
             PackageRepo = new PackageRepository(_dbContext);
         }
 
-        public void Save()
-        {
-            _dbContext.SaveChanges();
-        }
-
         public void Dispose()
         {
             _dbContext.Dispose();
+        }
+
+        public void Save()
+        {
+            _dbContext.SaveChanges();
         }
     }
 }
