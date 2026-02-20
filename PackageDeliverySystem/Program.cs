@@ -1,7 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using PackageDeliverySystem.DataAccess.DataAccess;
+using PackageDeliverySystem.Services;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddDbContext<AppDBContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        sqlOptions => sqlOptions.MigrationsAssembly("PackageDeliverySystem"))
+    );
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
