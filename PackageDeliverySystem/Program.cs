@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
+using PackageDeliverySystem.Services;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,8 @@ builder.Services.AddDbContext<AppDBContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         sqlOptions => sqlOptions.MigrationsAssembly("PackageDeliverySystem"))
     );
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PackageDeliverySystem.DataAccess\PackageDeliverySystem.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
