@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PackageDeliverySystem.DataAccess\PackageDeliverySystem.DataAccess.csproj" />
+    <ProjectReference Include="..\PackageDeliverySystem.Services\PackageDeliverySystem.Services.csproj" />
   </ItemGroup>
 
 </Project>
