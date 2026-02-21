@@ -1,0 +1,54 @@
+﻿@page
+@model PackageDeliverySystem.Pages.Admin.Employees.IndexModel
+@{
+}
+<div action="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h3 class="text-primary"> Employees </h3>
+		</div>
+		<div class="col-6">
+			<a asp-page="Create" class="btn btn-primary">
+				Create New Employee
+			</a>
+		</div>
+	</div>
+</div>
+
+<br />
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>PPS</th>
+			<th>Address</th>
+			<th>Date of Birth</th>
+			<th>Department</th>
+			<th>Salary</th>
+			<th>Username</th>
+			<th></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var obj in Model.Employees)
+		{
+			<tr>
+				<td>@obj.Name</td>
+				<td>@obj.PPS</td>
+				<td>@obj.Address</td>
+				<td>@obj.DateOfBirth.ToString("dd/MM/yyyy")</td>
+				<td>@obj.Dept</td>
+				<td>€@obj.Salary.ToString("N2")</td>
+				<td>@obj.Username</td>
+				<td>
+					<a asp-page="Edit" class="btn btn-primary" asp-route-id="@obj.Id">Edit</a>
+				</td>
+				<td>
+					<a asp-page="Delete" class="btn btn-danger" asp-route-id="@obj.Id">Delete</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

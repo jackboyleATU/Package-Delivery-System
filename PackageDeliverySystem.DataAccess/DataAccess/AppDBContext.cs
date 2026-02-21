@@ -49,7 +49,7 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                 p.HasOne(x => x.Customer)
                  .WithMany(c => c.Packages)
                  .HasForeignKey(x => x.CustomerId)
-                 .OnDelete(DeleteBehavior.Restrict);
+                 .OnDelete(DeleteBehavior.Cascade);
             });
 
             // Employees (2 Drivers, 2 Admin)
