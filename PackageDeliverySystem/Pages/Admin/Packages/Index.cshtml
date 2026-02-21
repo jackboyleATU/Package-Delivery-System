@@ -16,31 +16,37 @@
 </div>
 
 <br />
-<br />
-<br />
 
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
+			<th>Customer</th>
+			<th>Recipient</th>
 			<th>Destination</th>
 			<th>Type</th>
 			<th>Status</th>
+			<th>Cost</th>
+			<th></th>
+			<th></th>
 		</tr>
 	</thead>
 	<tbody>
-		@foreach (var obj in Model.Package)
+		@foreach (var obj in Model.Packages)
 		{
-					<tr>
-						<td width="50%">@obj.Destination</td>
-						<td width="50%">@obj.Type</td>
-						<td width="50%">@obj.Status</td>
-						<td>
-							<a asp-page="Edit" class="btn btn-primary" asp-route-id="@obj.Id">Edit</a>
-						</td>
-						<td>
-							<a asp-page="Delete" class="btn btn-primary" asp-route-id="@obj.Id">Delete</a>
-						</td>
-					</tr>
+			<tr>
+				<td>@obj.Customer?.Name</td>
+				<td>@obj.RecipientName</td>
+				<td>@obj.Destination</td>
+				<td>@obj.Type</td>
+				<td>@obj.Status</td>
+				<td>€@obj.Cost.ToString("N2")</td>
+				<td>
+					<a asp-page="Edit" class="btn btn-primary" asp-route-id="@obj.Id">Edit</a>
+				</td>
+				<td>
+					<a asp-page="Delete" class="btn btn-danger" asp-route-id="@obj.Id">Delete</a>
+				</td>
+			</tr>
 		}
 	</tbody>
 </table>

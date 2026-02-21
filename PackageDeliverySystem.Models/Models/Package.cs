@@ -32,7 +32,7 @@ namespace PackageDeliverySystem.Models.Models
         public double Cost { get; set; }
 
         public int CustomerId { get; set; } 
-        public Customer Customer { get; set; }
+        public Customer? Customer { get; set; }
 
     }
 }

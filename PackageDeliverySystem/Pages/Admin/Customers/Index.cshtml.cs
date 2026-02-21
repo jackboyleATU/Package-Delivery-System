@@ -23,7 +23,7 @@ namespace PackageDeliverySystem.Pages.Admin.Customers
 
         public void OnGet()
         {
-            Customers = _unitOfWork.CustomerRepo.GetAll();
+            Customers = _unitOfWork.CustomerRepo.GetAllWithPackages();
         }
     }
 }

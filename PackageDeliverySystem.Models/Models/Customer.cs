@@ -16,7 +16,7 @@ namespace PackageDeliverySystem.Models.Models
 
         public string Address { get; set; }
         
-        public ICollection<Package> Packages { get; set; }
+        public ICollection<Package>? Packages { get; set; }
 
     }
 }

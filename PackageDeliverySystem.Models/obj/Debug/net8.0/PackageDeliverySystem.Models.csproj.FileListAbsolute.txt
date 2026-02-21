@@ -58,3 +58,18 @@ C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Models\obj\
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.pdb
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.genruntimeconfig.cache
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\ref\PackageDeliverySystem.Models.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\bin\Debug\net8.0\PackageDeliverySystem.Models.deps.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\bin\Debug\net8.0\PackageDeliverySystem.Models.runtimeconfig.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\bin\Debug\net8.0\PackageDeliverySystem.Models.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\bin\Debug\net8.0\PackageDeliverySystem.Models.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.csproj.AssemblyReference.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.GeneratedMSBuildEditorConfig.editorconfig
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.AssemblyInfoInputs.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.AssemblyInfo.cs
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.csproj.CoreCompileInputs.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.sourcelink.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\refint\PackageDeliverySystem.Models.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\PackageDeliverySystem.Models.genruntimeconfig.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Models\obj\Debug\net8.0\ref\PackageDeliverySystem.Models.dll

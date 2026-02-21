@@ -7,7 +7,7 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
 {
     public class IndexModel : PageModel
     {
-        public IEnumerable<Package> Package { get; set; }
+        public IEnumerable<Package> Packages { get; set; }
 
         private readonly IUnitOfWork _unitOfWork;
 
@@ -19,7 +19,7 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
 
         public void OnGet()
         {
-            Package = _unitOfWork.PackageRepo.GetAll();
+            Packages = _unitOfWork.PackageRepo.GetAllWithCustomer();
         }
     }
 }

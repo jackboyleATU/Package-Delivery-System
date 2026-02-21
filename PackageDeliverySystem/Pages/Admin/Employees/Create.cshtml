@@ -14,22 +14,50 @@
 			<span asp-validation-for="@Model.Employee.Name" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
+			<label asp-for="@Model.Employee.PPS"></label>
+			<input asp-for="@Model.Employee.PPS" class="form-control" />
+			<span asp-validation-for="@Model.Employee.PPS" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
 			<label asp-for="@Model.Employee.Address"></label>
 			<input asp-for="@Model.Employee.Address" class="form-control" />
 			<span asp-validation-for="@Model.Employee.Address" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
+			<label asp-for="@Model.Employee.DateOfBirth"></label>
+			<input asp-for="@Model.Employee.DateOfBirth" type="date" class="form-control" />
+			<span asp-validation-for="@Model.Employee.DateOfBirth" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Employee.Salary"></label>
+			<input asp-for="@Model.Employee.Salary" type="number" step="0.01" class="form-control" />
+			<span asp-validation-for="@Model.Employee.Salary" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
 			<label asp-for="@Model.Employee.Dept"></label>
-			<input asp-for="@Model.Employee.Dept" class="form-control" />
+			<select asp-for="@Model.Employee.Dept" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Employee.Department>())">
+				<option disabled selected> --Select Department--- </option>
+			</select>
 			<span asp-validation-for="@Model.Employee.Dept" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Employee.Username"></label>
+			<input asp-for="@Model.Employee.Username" class="form-control" />
+			<span asp-validation-for="@Model.Employee.Username" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Employee.Password"></label>
+			<input asp-for="@Model.Employee.Password" type="password" class="form-control" />
+			<span asp-validation-for="@Model.Employee.Password" class="text-danger"></span>
 		</div>
 
 		<button type="submit" class="btn btn-primary">Create</button>
+		<a asp-page="Index" class="btn btn-secondary">Back to Index</a>
 	</div>
 </form>
 
 @section Scripts {
 	@{
-				<partial name="_validationScriptsPartial" />
+		<partial name="_validationScriptsPartial" />
 	}
 }

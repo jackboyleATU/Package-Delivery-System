@@ -4066,23 +4066,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\franc\\.nuget\\packages\\": {},
+    "C:\\Users\\realg\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+      "projectUniqueName": "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
       "projectName": "PackageDeliverySystem",
-      "projectPath": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
-      "packagesPath": "C:\\Users\\franc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
+      "projectPath": "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem\\PackageDeliverySystem.csproj",
+      "packagesPath": "C:\\Users\\realg\\.nuget\\packages\\",
+      "outputPath": "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\franc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\realg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4091,17 +4091,18 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
+            "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj": {
+              "projectPath": "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.DataAccess\\PackageDeliverySystem.DataAccess.csproj"
             },
-            "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj": {
-              "projectPath": "C:\\Users\\franc\\Desktop\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj"
+            "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj": {
+              "projectPath": "I:\\Team Project\\Package-Delivery-System\\PackageDeliverySystem.Services\\PackageDeliverySystem.Services.csproj"
             }
           }
         }
@@ -4116,7 +4117,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net8.0": {
@@ -4154,6 +4155,24 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[8.0.24, 8.0.24]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -4162,7 +4181,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

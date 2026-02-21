@@ -68,3 +68,23 @@ C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Services\ob
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.pdb
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.genruntimeconfig.cache
 C:\Users\franc\Desktop\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\ref\PackageDeliverySystem.Services.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.deps.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.runtimeconfig.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Services.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.DataAccess.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Models.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.DataAccess.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\bin\Debug\net8.0\PackageDeliverySystem.Models.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.csproj.AssemblyReference.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.GeneratedMSBuildEditorConfig.editorconfig
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.AssemblyInfoInputs.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.AssemblyInfo.cs
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.csproj.CoreCompileInputs.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.sourcelink.json
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageD.F0EB45A4.Up2Date
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\refint\PackageDeliverySystem.Services.dll
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.pdb
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\PackageDeliverySystem.Services.genruntimeconfig.cache
+I:\Team Project\Package-Delivery-System\PackageDeliverySystem.Services\obj\Debug\net8.0\ref\PackageDeliverySystem.Services.dll

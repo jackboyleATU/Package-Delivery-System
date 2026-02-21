@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Services;
 
@@ -14,20 +15,28 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
             _unitOfWork = unitOfWork;
         }
 
-        public Package package { get; set; }
+        [BindProperty]
+        public Package Package { get; set; }
+        
+        public SelectList Customers { get; set; }
+        
         public void OnGet(int id)
         {
-            package = _unitOfWork.PackageRepo.Get(id);
+            Package = _unitOfWork.PackageRepo.Get(id);
+            Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
         }
 
-        public IActionResult OnPost(Package package)
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.PackageRepo.Update(package);
+                _unitOfWork.PackageRepo.Update(Package);
                 _unitOfWork.Save();
+                return RedirectToPage("Index");
             }
-            return RedirectToPage("Index");
+            
+            Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
+            return Page();
         }
     }
 }

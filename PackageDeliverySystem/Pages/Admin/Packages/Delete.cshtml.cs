@@ -14,19 +14,24 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
             _unitOfWork = unitOfWork;
         }
 
-        public Package package { get; set; }
+        [BindProperty]
+        public Package Package { get; set; }
+        
         public void OnGet(int id)
         {
-            package = _unitOfWork.PackageRepo.Get(id);
+            Package = _unitOfWork.PackageRepo.Get(id);
         }
 
-        public IActionResult OnPost(Package package)
+        public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if (Package?.Id > 0)
             {
-                _unitOfWork.PackageRepo.Delete(package);
-                _unitOfWork.Save();
-
+                var packageToDelete = _unitOfWork.PackageRepo.Get(Package.Id);
+                if (packageToDelete != null)
+                {
+                    _unitOfWork.PackageRepo.Delete(packageToDelete);
+                    _unitOfWork.Save();
+                }
             }
             return RedirectToPage("Index");
         }

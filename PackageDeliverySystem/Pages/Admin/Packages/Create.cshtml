@@ -9,27 +9,49 @@
 		</div>
 
 		<div class="mb-3">
-			<label asp-for="@Model.package.Destination"></label>
-			<input asp-for="@Model.package.Destination" class="form-control" />
-			<span asp-validation-for="@Model.package.Destination" class="text-danger"></span>
+			<label asp-for="@Model.Package.CustomerId"></label>
+			<select asp-for="@Model.Package.CustomerId" class="form-select" asp-items="@Model.Customers">
+				<option disabled selected value=""> --Select Customer--- </option>
+			</select>
+			<span asp-validation-for="@Model.Package.CustomerId" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="@Model.package.Type"></label>
-			<input asp-for="@Model.package.Type" class="form-control" />
-			<span asp-validation-for="@Model.package.Type" class="text-danger"></span>
+			<label asp-for="@Model.Package.RecipientName"></label>
+			<input asp-for="@Model.Package.RecipientName" class="form-control" />
+			<span asp-validation-for="@Model.Package.RecipientName" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="@Model.package.Status"></label>
-			<input asp-for="@Model.package.Status" class="form-control" />
-			<span asp-validation-for="@Model.package.Status" class="text-danger"></span>
+			<label asp-for="@Model.Package.Destination"></label>
+			<input asp-for="@Model.Package.Destination" class="form-control" />
+			<span asp-validation-for="@Model.Package.Destination" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Package.Type"></label>
+			<select asp-for="@Model.Package.Type" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
+				<option disabled selected> --Select Package Type--- </option>
+			</select>
+			<span asp-validation-for="@Model.Package.Type" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Package.Status"></label>
+			<select asp-for="@Model.Package.Status" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())">
+				<option disabled selected> --Select Package Status--- </option>
+			</select>
+			<span asp-validation-for="@Model.Package.Status" class="text-danger"></span>
+		</div>
+		<div class="mb-3">
+			<label asp-for="@Model.Package.Cost"></label>
+			<input asp-for="@Model.Package.Cost" type="number" step="0.01" class="form-control" />
+			<span asp-validation-for="@Model.Package.Cost" class="text-danger"></span>
 		</div>
 
 		<button type="submit" class="btn btn-primary">Create</button>
+		<a asp-page="Index" class="btn btn-secondary">Back to Index</a>
 	</div>
 </form>
 
 @section Scripts {
 	@{
-						<partial name="_validationScriptsPartial" />
+		<partial name="_validationScriptsPartial" />
 	}
 }

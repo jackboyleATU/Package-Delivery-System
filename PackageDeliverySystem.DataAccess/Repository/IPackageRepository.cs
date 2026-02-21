@@ -10,5 +10,6 @@ namespace PackageDeliverySystem.DataAccess.Repository
     public interface IPackageRepository : IRepository<Package>
     {
         public void Update(Package package);
+        public IEnumerable<Package> GetAllWithCustomer();
     }
 }

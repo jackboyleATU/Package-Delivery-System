@@ -1,4 +1,5 @@
-﻿using PackageDeliverySystem.DataAccess.DataAccess;
+﻿using Microsoft.EntityFrameworkCore;
+using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,11 @@ namespace PackageDeliverySystem.DataAccess.Repository
         public PackageRepository(AppDBContext dbContext) : base(dbContext)
         {
             _dbContext = dbContext;
+        }
+
+        public IEnumerable<Package> GetAllWithCustomer()
+        {
+            return _dbContext.Packages.Include(p => p.Customer).ToList();
         }
     }
 }

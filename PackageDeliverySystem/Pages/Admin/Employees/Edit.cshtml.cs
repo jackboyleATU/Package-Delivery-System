@@ -14,20 +14,23 @@ namespace PackageDeliverySystem.Pages.Admin.Employees
             _unitOfWork = unitOfWork;
         }
 
+        [BindProperty]
         public Employee Employee { get; set; }
+        
         public void OnGet(int id)
         {
             Employee = _unitOfWork.EmployeeRepo.Get(id);
         }
 
-        public IActionResult OnPost(Employee employee)
+        public IActionResult OnPost()
         {
             if (ModelState.IsValid)
             {
-                _unitOfWork.EmployeeRepo.Update(employee);
+                _unitOfWork.EmployeeRepo.Update(Employee);
                 _unitOfWork.Save();
+                return RedirectToPage("Index");
             }
-            return RedirectToPage("Index");
+            return Page();
         }
     }
 }

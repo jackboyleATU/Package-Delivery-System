@@ -14,19 +14,24 @@ namespace PackageDeliverySystem.Pages.Admin.Employees
             _unitOfWork = unitOfWork;
         }
 
+        [BindProperty]
         public Employee Employee { get; set; }
+        
         public void OnGet(int id)
         {
             Employee = _unitOfWork.EmployeeRepo.Get(id);
         }
 
-        public IActionResult OnPost(Employee employee)
+        public IActionResult OnPost()
         {
-            if (ModelState.IsValid)
+            if (Employee?.Id > 0)
             {
-                _unitOfWork.EmployeeRepo.Delete(employee);
-                _unitOfWork.Save();
-
+                var employeeToDelete = _unitOfWork.EmployeeRepo.Get(Employee.Id);
+                if (employeeToDelete != null)
+                {
+                    _unitOfWork.EmployeeRepo.Delete(employeeToDelete);
+                    _unitOfWork.Save();
+                }
             }
             return RedirectToPage("Index");
         }
