@@ -45,6 +45,12 @@
 			<span asp-validation-for="@Model.Package.Cost" class="text-danger"></span>
 		</div>
 
+		<div class="mb-3">
+			<label asp-for="@Model.Package.DeliveryDate"></label>
+			<input asp-for="@Model.Package.DeliveryDate" type="date" step="0.01" class="form-control" />
+			<span asp-validation-for="@Model.Package.DeliveryDate" class="text-danger"></span>
+		</div>
+
 		<button type="submit" class="btn btn-primary">Create</button>
 		<a asp-page="Index" class="btn btn-secondary">Back to Index</a>
 	</div>

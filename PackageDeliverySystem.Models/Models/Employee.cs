@@ -14,8 +14,10 @@ namespace PackageDeliverySystem.Models.Models
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; } 
+        [Required]
+        public string Name { get; set; }
 
+        [Required]
         public Department Dept { get; set; }
 
         public string PPS { get; set; }
@@ -24,7 +26,9 @@ namespace PackageDeliverySystem.Models.Models
 
         public DateTime DateOfBirth { get; set; }
 
+        [Required]
         public double Salary { get; set; }
+
 
         public string Username { get; set; }
         public string Password { get; set; }

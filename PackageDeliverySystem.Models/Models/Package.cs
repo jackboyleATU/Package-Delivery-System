@@ -29,6 +29,13 @@ namespace PackageDeliverySystem.Models.Models
 
         public PackageType Type { get; set; }
 
+        public DateTime DeliveryDate { get; set; }
+
+        public double Weight { get; set; }
+
+        [Range(0, 4)]
+        public int AttemptedDeliveries { get; set; }
+
         public double Cost { get; set; }
 
         public int CustomerId { get; set; } 

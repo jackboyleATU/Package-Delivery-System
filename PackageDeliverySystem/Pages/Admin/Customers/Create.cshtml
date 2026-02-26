@@ -18,7 +18,7 @@
 			<input asp-for="@Model.Customer.Address" class="form-control" />
 			<span asp-validation-for="@Model.Customer.Address" class="text-danger"></span>
 		</div>
-		<div class="mb-3">
+		<div hidden class="mb-3">
 			<label asp-for="@Model.Customer.Packages"></label>
 			<input asp-for="@Model.Customer.Packages" class="form-control" />
 			<span asp-validation-for="@Model.Customer.Packages" class="text-danger"></span>
