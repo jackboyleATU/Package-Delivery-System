@@ -29,6 +29,10 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
         {
             if (ModelState.IsValid)
             {
+                if (string.IsNullOrWhiteSpace(Package.OrderNumber))
+                {
+                    Package.OrderNumber = $"ORD-{DateTime.UtcNow:yyyyMMdd}-{Guid.NewGuid().ToString("N")[..6].ToUpper()}";
+                }
                 _unitOfWork.PackageRepo.Add(Package);
                 _unitOfWork.Save();
                 return RedirectToPage("Index");

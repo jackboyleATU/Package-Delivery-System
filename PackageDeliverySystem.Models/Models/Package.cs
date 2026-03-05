@@ -21,6 +21,9 @@ namespace PackageDeliverySystem.Models.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        public string OrderNumber { get; set; } = string.Empty;
+
         public PackageStatus Status { get; set; }
 
         public string Destination { get; set; }
