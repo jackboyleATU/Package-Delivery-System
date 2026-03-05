@@ -7,6 +7,7 @@ namespace PackageDeliverySystem.Pages.CustomerViews
     {
         public void OnGet()
         {
+
         }
     }
 }
