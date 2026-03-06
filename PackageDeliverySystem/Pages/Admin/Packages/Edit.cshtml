@@ -11,7 +11,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.CustomerId"></label>
-			<select asp-for="@Model.Package.CustomerId" class="form-select" asp-items="@Model.Customers">
+			<select disabled asp-for="@Model.Package.CustomerId" class="form-control" asp-items="@Model.Customers">
 				<option disabled value=""> --Select Customer--- </option>
 			</select>
 			<span asp-validation-for="@Model.Package.CustomerId" class="text-danger"></span>
@@ -19,7 +19,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.OrderNumber">Order Number</label>
-			<input asp-for="@Model.Package.OrderNumber" class="form-control" />
+			<input disabled asp-for="@Model.Package.OrderNumber" class="form-control" />
 			<span asp-validation-for="@Model.Package.OrderNumber" class="text-danger"></span>
 		</div>
 
@@ -37,7 +37,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Type"></label>
-			<select asp-for="@Model.Package.Type" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
+			<select disabled asp-for="@Model.Package.Type" class="form-control" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
 				<option disabled> --Select Package Type--- </option>
 			</select>
 			<span asp-validation-for="@Model.Package.Type" class="text-danger"></span>
@@ -45,9 +45,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Status"></label>
-			<select asp-for="@Model.Package.Status" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())">
-				<option disabled> --Select Package Status--- </option>
-			</select>
+			<select disabled asp-for="@Model.Package.Status" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
 			<span asp-validation-for="@Model.Package.Status" class="text-danger"></span>
 		</div>
 

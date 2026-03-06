@@ -11,6 +11,7 @@ namespace PackageDeliverySystem.Models.Models
     {
         public enum PackageStatus
         {
+            Processing,
             AwaitingPickup,
             InTransit,
             Delivered
@@ -21,7 +22,6 @@ namespace PackageDeliverySystem.Models.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public string OrderNumber { get; set; } = string.Empty;
 
         public PackageStatus Status { get; set; }
