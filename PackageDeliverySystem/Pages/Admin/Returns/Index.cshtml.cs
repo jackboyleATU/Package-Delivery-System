@@ -29,7 +29,6 @@ namespace PackageDeliverySystem.Pages.Admin.Returns
                 .ToList();
         }
 
-        // "Send back to sender with message" (no email)
         public IActionResult OnPostReturnToSender(int id)
         {
             var pkg = _unitOfWork.PackageRepo.GetAllWithCustomer().FirstOrDefault(p => p.Id == id);
@@ -62,7 +61,8 @@ namespace PackageDeliverySystem.Pages.Admin.Returns
             // Reset attempts so it doesn’t instantly re-appear in Returns
             pkg.AttemptedDeliveries = 0;
 
-            _unitOfWork.PackageRepo.Update(pkg);
+            // `pkg` was loaded from the same DbContext and is already tracked.
+            // Modifying its properties is sufficient — calling Save() will persist changes.
             _unitOfWork.Save();
 
             FlashMessage = $"Package has been set to RETURN TO SENDER. It will be sent back to: {pkg.Customer.Name}, {pkg.Customer.Address}.";

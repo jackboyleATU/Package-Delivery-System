@@ -40,8 +40,9 @@ namespace PackageDeliverySystem.Models.Models
         public int AttemptedDeliveries { get; set; }
 
         public double Cost { get; set; }
-
-        public int CustomerId { get; set; } 
+        // Require a valid customer selection (IDs start at 1)
+        [Range(1, int.MaxValue, ErrorMessage = "Please select a customer.")]
+        public int CustomerId { get; set; }
         public Customer? Customer { get; set; }
 
     }

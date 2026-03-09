@@ -2,7 +2,9 @@
 @model PackageDeliverySystem.Pages.Admin.Packages.CreateModel
 @{
 }
+
 <form method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
 			<h2 action="text-primary pl-3">Create New Package</h2>
@@ -10,7 +12,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.CustomerId">Customer(Sender)</label>
-			<select asp-for="@Model.Package.CustomerId" class="form-select" asp-items="@Model.Customers">
+            <select asp-for="@Model.Package.CustomerId" class="form-select" asp-items="@Model.Customers" required>
 				<option disabled selected value=""> --Select Customer--- </option>
 			</select>
 			<span asp-validation-for="@Model.Package.CustomerId" class="text-danger"></span>
@@ -18,7 +20,8 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.OrderNumber">Order Number</label>
-			<input disabled asp-for="@Model.Package.OrderNumber" class="form-control" placeholder="Leave blank" />
+		<input disabled asp-for="@Model.Package.OrderNumber" class="form-control" placeholder="Leave blank" />
+		<input type="hidden" asp-for="@Model.Package.OrderNumber" />
 			<span asp-validation-for="@Model.Package.OrderNumber" class="text-danger"></span>
 		</div>
 
@@ -44,7 +47,8 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Status"></label>
-			<select disabled asp-for="@Model.Package.Status" class="form-select" placeholder="Processing" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
+		<select disabled asp-for="@Model.Package.Status" class="form-select" placeholder="Processing" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
+		<input type="hidden" asp-for="@Model.Package.Status" />
 			<span asp-validation-for="@Model.Package.Status" class="text-danger"></span>
 		</div>
 
@@ -56,7 +60,8 @@
 
 		<div hidden class="mb-3">
 			<label asp-for="@Model.Package.DeliveryDate"></label>
-			<input asp-for="@Model.Package.DeliveryDate" type="date" step="0.01" class="form-control" />
+		<input asp-for="@Model.Package.DeliveryDate" type="date" step="0.01" class="form-control" />
+		<input type="hidden" asp-for="@Model.Package.DeliveryDate" />
 			<span asp-validation-for="@Model.Package.DeliveryDate" class="text-danger"></span>
 		</div>
 

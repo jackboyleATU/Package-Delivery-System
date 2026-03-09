@@ -24,12 +24,24 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
         
         public void OnGet()
         {
+            // Initialize an empty Package so the form has default values (e.g. Status/DeliveryDate)
+            Package = new Package
+            {
+                DeliveryDate = DateTime.Now,
+                Status = Package.PackageStatus.Processing
+            };
+
             Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
         }
 
         public IActionResult OnPost()
         {
             ModelState.Remove("Package.OrderNumber");
+            // If DeliveryDate wasn't provided, set a sensible default
+            if (Package.DeliveryDate == default)
+            {
+                Package.DeliveryDate = DateTime.Now;
+            }
 
             if (ModelState.IsValid)
             {

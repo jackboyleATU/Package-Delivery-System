@@ -4,6 +4,11 @@
 }
 <form method="post">
 	<input hidden asp-for="Package.Id" />
+	<!-- Disabled inputs are not posted by the browser. Add hidden fields to preserve their values on submit. -->
+	<input type="hidden" asp-for="Package.CustomerId" />
+	<input type="hidden" asp-for="Package.OrderNumber" />
+	<input type="hidden" asp-for="Package.Type" />
+	<input type="hidden" asp-for="Package.Status" />
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
 			<h2 action="text-primary pl-3">Update Package</h2>
