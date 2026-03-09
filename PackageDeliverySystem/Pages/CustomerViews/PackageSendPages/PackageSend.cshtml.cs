@@ -27,15 +27,48 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 
         public IActionResult OnPost()
         {
+            if (Package.DeliveryDate.Date <= DateTime.Now.Date)
+            {
+                ModelState.AddModelError("Package.DeliveryDate", "Delivery date must be a future date.");
+            }
+
+            if (Package.Weight <= 0)
+            {
+                ModelState.AddModelError("Package.Weight", "Weight must be a positive number.");
+            }
+
             if (ModelState.IsValid)
             {
-                _unitOfWork.PackageRepo.Add(Package);
-                _unitOfWork.Save();
-                return RedirectToPage("Index");
+                Package.Cost = CalculateCost(Package.Type, Package.Weight);
+
+                // Store temporary data to pass into confirmation page
+                TempData["Package_CustomerId"] = Package.CustomerId;
+                TempData["Package_RecipientName"] = Package.RecipientName;
+                TempData["Package_Destination"] = Package.Destination;
+                TempData["Package_Type"] = (int)Package.Type;
+                TempData["Package_Weight"] = Package.Weight.ToString("R");
+                TempData["Package_DeliveryDate"] = Package.DeliveryDate.ToString("o");
+                TempData["Package_Cost"] = Package.Cost.ToString("R");
+
+                return RedirectToPage("Confirm");
             }
 
             Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
             return Page();
+        }
+
+        private static double CalculateCost(Package.PackageType type, double weight)
+        {
+            if (type == Package.PackageType.Letter)
+            {
+                return 3.50 + (weight * 0.50);
+            }
+            else if (type == Package.PackageType.Parcel)
+            {
+                return 5.00 + (weight * 2.00);
+            }
+
+            throw new Exception("Invalid Package type");
         }
     }
 }
