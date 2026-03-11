@@ -24,4 +24,8 @@
     <ProjectReference Include="..\PackageDeliverySystem.Services\PackageDeliverySystem.Services.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\CustomerViews\PackageTracking\" />
+  </ItemGroup>
+
 </Project>

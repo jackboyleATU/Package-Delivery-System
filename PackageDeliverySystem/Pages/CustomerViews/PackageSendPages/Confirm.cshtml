@@ -1,0 +1,45 @@
+﻿@page
+@model PackageDeliverySystem.Pages.CustomerViews.PackageSendPages.ConfirmModel
+@{
+}
+
+<div class="border p-3 mt-4">
+    <h2 class="text-primary">Confirm Package Details</h2>
+    <p>Please review the details below before confirming.</p>
+
+    <table class="table">
+        <tr>
+            <th>Customer</th>
+            <td>@Model.CustomerName</td>
+        </tr>
+        <tr>
+            <th>Recipient</th>
+            <td>@Model.Package.RecipientName</td>
+        </tr>
+        <tr>
+            <th>Destination</th>
+            <td>@Model.Package.Destination</td>
+        </tr>
+        <tr>
+            <th>Type</th>
+            <td>@Model.Package.Type</td>
+        </tr>
+        <tr>
+            <th>Weight</th>
+            <td>@Model.Package.Weight kg</td>
+        </tr>
+        <tr>
+            <th>Delivery Date</th>
+            <td>@Model.Package.DeliveryDate.ToString("dd MMM yyyy")</td>
+        </tr>
+        <tr class="table-info fw-bold">
+            <th>Estimated Cost</th>
+            <td>€@Model.Package.Cost.ToString("F2")</td>
+        </tr>
+    </table>
+
+    <form method="post">
+        <button type="submit" class="btn btn-success">Confirm & Send</button>
+        <a asp-page="PackageSend" class="btn btn-secondary">Go Back</a>
+    </form>
+</div>
