@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PackageDeliverySystem.DataAccess.DataAccess;
 
@@ -11,9 +12,11 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260309175455_Num5")]
+    partial class Num5
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,204 +24,6 @@ namespace PackageDeliverySystem.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedName")
-                        .IsUnique()
-                        .HasDatabaseName("RoleNameIndex")
-                        .HasFilter("[NormalizedName] IS NOT NULL");
-
-                    b.ToTable("AspNetRoles", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RoleId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetRoleClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUser", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("AccessFailedCount")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ConcurrencyStamp")
-                        .IsConcurrencyToken()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Email")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<bool>("EmailConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("LockoutEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTimeOffset?>("LockoutEnd")
-                        .HasColumnType("datetimeoffset");
-
-                    b.Property<string>("NormalizedEmail")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("NormalizedUserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("PhoneNumberConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("SecurityStamp")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("TwoFactorEnabled")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(256)
-                        .HasColumnType("nvarchar(256)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("NormalizedEmail")
-                        .HasDatabaseName("EmailIndex");
-
-                    b.HasIndex("NormalizedUserName")
-                        .IsUnique()
-                        .HasDatabaseName("UserNameIndex")
-                        .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-                    b.ToTable("AspNetUsers", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ClaimType")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ClaimValue")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserClaims", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
-                {
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("ProviderDisplayName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("LoginProvider", "ProviderKey");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("AspNetUserLogins", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("RoleId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("UserId", "RoleId");
-
-                    b.HasIndex("RoleId");
-
-                    b.ToTable("AspNetUserRoles", (string)null);
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("Value")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("UserId", "LoginProvider", "Name");
-
-                    b.ToTable("AspNetUserTokens", (string)null);
-                });
 
             modelBuilder.Entity("PackageDeliverySystem.Models.Models.Customer", b =>
                 {
@@ -617,7 +422,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "12 Hill St, Derry",
                             OrderNumber = "ORD-2025-00001",
                             RecipientName = "Emma OConnor",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.5
                         },
@@ -631,7 +436,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "12 Hill St, Derry",
                             OrderNumber = "ORD-2025-00002",
                             RecipientName = "Emma OConnor",
-                            Status = 1,
+                            Status = 2,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -645,7 +450,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "4 Main Rd, Letterkenny",
                             OrderNumber = "ORD-2025-00003",
                             RecipientName = "Sophie Gallagher",
-                            Status = 0,
+                            Status = 1,
                             Type = 1,
                             Weight = 3.2000000000000002
                         },
@@ -659,7 +464,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "4 Main Rd, Letterkenny",
                             OrderNumber = "ORD-2025-00004",
                             RecipientName = "Sophie Gallagher",
-                            Status = 2,
+                            Status = 3,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -673,7 +478,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "8 River Walk, Buncrana",
                             OrderNumber = "ORD-2025-00005",
                             RecipientName = "Aoife Kelly",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 1.8
                         },
@@ -687,7 +492,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "8 River Walk, Buncrana",
                             OrderNumber = "ORD-2025-00006",
                             RecipientName = "Aoife Kelly",
-                            Status = 2,
+                            Status = 3,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -701,21 +506,21 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "22 Oak Ave, Dublin",
                             OrderNumber = "ORD-2025-00007",
                             RecipientName = "Sarah Murphy",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 4.0
                         },
                         new
                         {
                             Id = 8,
-                            AttemptedDeliveries = 0,
+                            AttemptedDeliveries = 3,
                             Cost = 11.75,
                             CustomerId = 4,
                             DeliveryDate = new DateTime(2025, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "22 Oak Ave, Dublin",
                             OrderNumber = "ORD-2025-00008",
                             RecipientName = "Sarah Murphy",
-                            Status = 1,
+                            Status = 2,
                             Type = 1,
                             Weight = 2.1000000000000001
                         },
@@ -729,7 +534,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "9 Park Lane, Cork",
                             OrderNumber = "ORD-2025-00009",
                             RecipientName = "Lucy Boyle",
-                            Status = 0,
+                            Status = 1,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -743,7 +548,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "9 Park Lane, Cork",
                             OrderNumber = "ORD-2025-00010",
                             RecipientName = "Lucy Boyle",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 3.5
                         },
@@ -757,7 +562,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "1 Green Rd, Galway",
                             OrderNumber = "ORD-2025-00011",
                             RecipientName = "Grace Dunne",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 1.8999999999999999
                         },
@@ -771,7 +576,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "3 Harbour View, Sligo",
                             OrderNumber = "ORD-2025-00012",
                             RecipientName = "Mia Quinn",
-                            Status = 0,
+                            Status = 1,
                             Type = 1,
                             Weight = 3.2999999999999998
                         },
@@ -785,7 +590,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "7 Meadow Rd, Limerick",
                             OrderNumber = "ORD-2025-00013",
                             RecipientName = "Hannah Ward",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.0
                         },
@@ -799,7 +604,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "14 Bridge St, Waterford",
                             OrderNumber = "ORD-2025-00014",
                             RecipientName = "Chloe Reid",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 4.5
                         },
@@ -813,7 +618,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "6 Hilltop, Donegal",
                             OrderNumber = "ORD-2025-00015",
                             RecipientName = "Ella Ferry",
-                            Status = 0,
+                            Status = 1,
                             Type = 1,
                             Weight = 2.2999999999999998
                         },
@@ -827,7 +632,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "6 Hilltop, Donegal",
                             OrderNumber = "ORD-2025-00016",
                             RecipientName = "Ella Ferry",
-                            Status = 2,
+                            Status = 3,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -841,21 +646,21 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "18 Pine Rd, Armagh",
                             OrderNumber = "ORD-2025-00017",
                             RecipientName = "Lily Kane",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.3999999999999999
                         },
                         new
                         {
                             Id = 18,
-                            AttemptedDeliveries = 0,
+                            AttemptedDeliveries = 3,
                             Cost = 21.0,
                             CustomerId = 12,
                             DeliveryDate = new DateTime(2025, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "5 Cedar Ave, Newry",
                             OrderNumber = "ORD-2025-00018",
                             RecipientName = "Zoe Moore",
-                            Status = 1,
+                            Status = 2,
                             Type = 1,
                             Weight = 3.7999999999999998
                         },
@@ -869,7 +674,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "11 Glen St, Dundalk",
                             OrderNumber = "ORD-2025-00019",
                             RecipientName = "Isla Byrne",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.7000000000000002
                         },
@@ -883,7 +688,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "20 Church Rd, Kilkenny",
                             OrderNumber = "ORD-2025-00020",
                             RecipientName = "Freya Sweeney",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 4.2000000000000002
                         },
@@ -897,7 +702,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "2 Oakfield, Clare",
                             OrderNumber = "ORD-2025-00021",
                             RecipientName = "Ruby McBride",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 1.5
                         },
@@ -911,7 +716,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "17 Riverbank, Mayo",
                             OrderNumber = "ORD-2025-00022",
                             RecipientName = "Emily Gillen",
-                            Status = 0,
+                            Status = 1,
                             Type = 1,
                             Weight = 3.7000000000000002
                         },
@@ -925,21 +730,21 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "9 Parkview, Wexford",
                             OrderNumber = "ORD-2025-00023",
                             RecipientName = "Anna Devlin",
-                            Status = 2,
+                            Status = 3,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
                         new
                         {
                             Id = 24,
-                            AttemptedDeliveries = 0,
+                            AttemptedDeliveries = 3,
                             Cost = 12.49,
                             CustomerId = 18,
                             DeliveryDate = new DateTime(2025, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "13 Main St, Monaghan",
                             OrderNumber = "ORD-2025-00024",
                             RecipientName = "Kate Curran",
-                            Status = 1,
+                            Status = 2,
                             Type = 1,
                             Weight = 2.2000000000000002
                         },
@@ -953,7 +758,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "15 Hillcrest, Derry",
                             OrderNumber = "ORD-2025-00025",
                             RecipientName = "Olivia OBrien",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 3.3999999999999999
                         },
@@ -967,7 +772,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "19 Oak Rd, Strabane",
                             OrderNumber = "ORD-2025-00026",
                             RecipientName = "Ava McLaughlin",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.6000000000000001
                         },
@@ -981,7 +786,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "21 Harbour St, Galway",
                             OrderNumber = "ORD-2025-00027",
                             RecipientName = "Molly Gallagher",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 4.0999999999999996
                         },
@@ -995,21 +800,21 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "23 Station Rd, Cork",
                             OrderNumber = "ORD-2025-00028",
                             RecipientName = "Evie Kelly",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.7999999999999998
                         },
                         new
                         {
                             Id = 29,
-                            AttemptedDeliveries = 0,
+                            AttemptedDeliveries = 3,
                             Cost = 4.25,
                             CustomerId = 23,
                             DeliveryDate = new DateTime(2025, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "25 Glen Rd, Dublin",
                             OrderNumber = "ORD-2025-00029",
                             RecipientName = "Niamh Murphy",
-                            Status = 1,
+                            Status = 2,
                             Type = 0,
                             Weight = 0.10000000000000001
                         },
@@ -1023,7 +828,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "27 Bridge Ave, Sligo",
                             OrderNumber = "ORD-2025-00030",
                             RecipientName = "Clara Boyle",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 3.8999999999999999
                         },
@@ -1037,7 +842,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "29 Meadow View, Letterkenny",
                             OrderNumber = "ORD-2025-00031",
                             RecipientName = "Erin Doherty",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 2.1000000000000001
                         },
@@ -1051,7 +856,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "4 Main Rd, Letterkenny",
                             OrderNumber = "ORD-2025-00032",
                             RecipientName = "Sophie Gallagher",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 1.7
                         },
@@ -1065,7 +870,7 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "9 Park Lane, Cork",
                             OrderNumber = "ORD-2025-00033",
                             RecipientName = "Lucy Boyle",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 1.6000000000000001
                         },
@@ -1079,75 +884,24 @@ namespace PackageDeliverySystem.Migrations
                             Destination = "6 Hilltop, Donegal",
                             OrderNumber = "ORD-2025-00034",
                             RecipientName = "Ella Ferry",
-                            Status = 2,
+                            Status = 3,
                             Type = 1,
                             Weight = 3.6000000000000001
                         },
                         new
                         {
                             Id = 35,
-                            AttemptedDeliveries = 0,
+                            AttemptedDeliveries = 4,
                             Cost = 3.75,
                             CustomerId = 15,
                             DeliveryDate = new DateTime(2025, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "2 Oakfield, Clare",
                             OrderNumber = "ORD-2025-00035",
                             RecipientName = "Ruby McBride",
-                            Status = 0,
+                            Status = 1,
                             Type = 0,
                             Weight = 0.10000000000000001
                         });
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                        .WithMany()
-                        .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
-                {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", null)
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("PackageDeliverySystem.Models.Models.Package", b =>

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace PackageDeliverySystem.Services
 {
@@ -31,7 +32,16 @@ namespace PackageDeliverySystem.Services
 
         public void Save()
         {
-            _dbContext.SaveChanges();
+            try
+            {
+                _dbContext.SaveChanges();
+            }
+            catch (DbUpdateException ex)
+            {
+                var entries = ex.Entries?.Select(e => $"{e.Entity.GetType().Name} ({e.State})");
+                var msg = $"Save failed: {ex.InnerException?.Message ?? ex.Message}. Entries: {string.Join(", ", entries ?? Enumerable.Empty<string>())}";
+                throw new Exception(msg, ex);
+            }
         }
     }
 }

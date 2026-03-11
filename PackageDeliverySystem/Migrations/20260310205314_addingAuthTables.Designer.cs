@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PackageDeliverySystem.DataAccess.DataAccess;
 
@@ -11,9 +12,11 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260310205314_addingAuthTables")]
+    partial class addingAuthTables
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -581,11 +584,6 @@ namespace PackageDeliverySystem.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("OrderNumber")
-                        .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
                     b.Property<string>("RecipientName")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -615,7 +613,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 1,
                             DeliveryDate = new DateTime(2025, 1, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "12 Hill St, Derry",
-                            OrderNumber = "ORD-2025-00001",
                             RecipientName = "Emma OConnor",
                             Status = 2,
                             Type = 1,
@@ -629,7 +626,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 1,
                             DeliveryDate = new DateTime(2025, 1, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "12 Hill St, Derry",
-                            OrderNumber = "ORD-2025-00002",
                             RecipientName = "Emma OConnor",
                             Status = 1,
                             Type = 0,
@@ -643,7 +639,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 2,
                             DeliveryDate = new DateTime(2025, 1, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "4 Main Rd, Letterkenny",
-                            OrderNumber = "ORD-2025-00003",
                             RecipientName = "Sophie Gallagher",
                             Status = 0,
                             Type = 1,
@@ -657,7 +652,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 2,
                             DeliveryDate = new DateTime(2025, 1, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "4 Main Rd, Letterkenny",
-                            OrderNumber = "ORD-2025-00004",
                             RecipientName = "Sophie Gallagher",
                             Status = 2,
                             Type = 0,
@@ -671,7 +665,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 3,
                             DeliveryDate = new DateTime(2025, 1, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "8 River Walk, Buncrana",
-                            OrderNumber = "ORD-2025-00005",
                             RecipientName = "Aoife Kelly",
                             Status = 2,
                             Type = 1,
@@ -685,7 +678,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 3,
                             DeliveryDate = new DateTime(2025, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "8 River Walk, Buncrana",
-                            OrderNumber = "ORD-2025-00006",
                             RecipientName = "Aoife Kelly",
                             Status = 2,
                             Type = 0,
@@ -699,7 +691,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 4,
                             DeliveryDate = new DateTime(2025, 1, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "22 Oak Ave, Dublin",
-                            OrderNumber = "ORD-2025-00007",
                             RecipientName = "Sarah Murphy",
                             Status = 2,
                             Type = 1,
@@ -713,7 +704,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 4,
                             DeliveryDate = new DateTime(2025, 1, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "22 Oak Ave, Dublin",
-                            OrderNumber = "ORD-2025-00008",
                             RecipientName = "Sarah Murphy",
                             Status = 1,
                             Type = 1,
@@ -727,7 +717,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 5,
                             DeliveryDate = new DateTime(2025, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "9 Park Lane, Cork",
-                            OrderNumber = "ORD-2025-00009",
                             RecipientName = "Lucy Boyle",
                             Status = 0,
                             Type = 0,
@@ -741,7 +730,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 5,
                             DeliveryDate = new DateTime(2025, 1, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "9 Park Lane, Cork",
-                            OrderNumber = "ORD-2025-00010",
                             RecipientName = "Lucy Boyle",
                             Status = 2,
                             Type = 1,
@@ -755,7 +743,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 6,
                             DeliveryDate = new DateTime(2025, 1, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "1 Green Rd, Galway",
-                            OrderNumber = "ORD-2025-00011",
                             RecipientName = "Grace Dunne",
                             Status = 2,
                             Type = 1,
@@ -769,7 +756,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 7,
                             DeliveryDate = new DateTime(2025, 1, 28, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "3 Harbour View, Sligo",
-                            OrderNumber = "ORD-2025-00012",
                             RecipientName = "Mia Quinn",
                             Status = 0,
                             Type = 1,
@@ -783,7 +769,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 8,
                             DeliveryDate = new DateTime(2025, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "7 Meadow Rd, Limerick",
-                            OrderNumber = "ORD-2025-00013",
                             RecipientName = "Hannah Ward",
                             Status = 2,
                             Type = 1,
@@ -797,7 +782,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 9,
                             DeliveryDate = new DateTime(2025, 2, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "14 Bridge St, Waterford",
-                            OrderNumber = "ORD-2025-00014",
                             RecipientName = "Chloe Reid",
                             Status = 2,
                             Type = 1,
@@ -811,7 +795,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 10,
                             DeliveryDate = new DateTime(2025, 2, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "6 Hilltop, Donegal",
-                            OrderNumber = "ORD-2025-00015",
                             RecipientName = "Ella Ferry",
                             Status = 0,
                             Type = 1,
@@ -825,7 +808,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 10,
                             DeliveryDate = new DateTime(2025, 2, 6, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "6 Hilltop, Donegal",
-                            OrderNumber = "ORD-2025-00016",
                             RecipientName = "Ella Ferry",
                             Status = 2,
                             Type = 0,
@@ -839,7 +821,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 11,
                             DeliveryDate = new DateTime(2025, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "18 Pine Rd, Armagh",
-                            OrderNumber = "ORD-2025-00017",
                             RecipientName = "Lily Kane",
                             Status = 2,
                             Type = 1,
@@ -853,7 +834,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 12,
                             DeliveryDate = new DateTime(2025, 2, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "5 Cedar Ave, Newry",
-                            OrderNumber = "ORD-2025-00018",
                             RecipientName = "Zoe Moore",
                             Status = 1,
                             Type = 1,
@@ -867,7 +847,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 13,
                             DeliveryDate = new DateTime(2025, 2, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "11 Glen St, Dundalk",
-                            OrderNumber = "ORD-2025-00019",
                             RecipientName = "Isla Byrne",
                             Status = 2,
                             Type = 1,
@@ -881,7 +860,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 14,
                             DeliveryDate = new DateTime(2025, 2, 14, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "20 Church Rd, Kilkenny",
-                            OrderNumber = "ORD-2025-00020",
                             RecipientName = "Freya Sweeney",
                             Status = 2,
                             Type = 1,
@@ -895,7 +873,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 15,
                             DeliveryDate = new DateTime(2025, 2, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "2 Oakfield, Clare",
-                            OrderNumber = "ORD-2025-00021",
                             RecipientName = "Ruby McBride",
                             Status = 2,
                             Type = 1,
@@ -909,7 +886,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 16,
                             DeliveryDate = new DateTime(2025, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "17 Riverbank, Mayo",
-                            OrderNumber = "ORD-2025-00022",
                             RecipientName = "Emily Gillen",
                             Status = 0,
                             Type = 1,
@@ -923,7 +899,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 17,
                             DeliveryDate = new DateTime(2025, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "9 Parkview, Wexford",
-                            OrderNumber = "ORD-2025-00023",
                             RecipientName = "Anna Devlin",
                             Status = 2,
                             Type = 0,
@@ -937,7 +912,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 18,
                             DeliveryDate = new DateTime(2025, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "13 Main St, Monaghan",
-                            OrderNumber = "ORD-2025-00024",
                             RecipientName = "Kate Curran",
                             Status = 1,
                             Type = 1,
@@ -951,7 +925,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 19,
                             DeliveryDate = new DateTime(2025, 2, 24, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "15 Hillcrest, Derry",
-                            OrderNumber = "ORD-2025-00025",
                             RecipientName = "Olivia OBrien",
                             Status = 2,
                             Type = 1,
@@ -965,7 +938,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 20,
                             DeliveryDate = new DateTime(2025, 2, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "19 Oak Rd, Strabane",
-                            OrderNumber = "ORD-2025-00026",
                             RecipientName = "Ava McLaughlin",
                             Status = 2,
                             Type = 1,
@@ -979,7 +951,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 21,
                             DeliveryDate = new DateTime(2025, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "21 Harbour St, Galway",
-                            OrderNumber = "ORD-2025-00027",
                             RecipientName = "Molly Gallagher",
                             Status = 2,
                             Type = 1,
@@ -993,7 +964,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 22,
                             DeliveryDate = new DateTime(2025, 3, 3, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "23 Station Rd, Cork",
-                            OrderNumber = "ORD-2025-00028",
                             RecipientName = "Evie Kelly",
                             Status = 2,
                             Type = 1,
@@ -1007,7 +977,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 23,
                             DeliveryDate = new DateTime(2025, 3, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "25 Glen Rd, Dublin",
-                            OrderNumber = "ORD-2025-00029",
                             RecipientName = "Niamh Murphy",
                             Status = 1,
                             Type = 0,
@@ -1021,7 +990,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 24,
                             DeliveryDate = new DateTime(2025, 3, 7, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "27 Bridge Ave, Sligo",
-                            OrderNumber = "ORD-2025-00030",
                             RecipientName = "Clara Boyle",
                             Status = 2,
                             Type = 1,
@@ -1035,7 +1003,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 25,
                             DeliveryDate = new DateTime(2025, 3, 9, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "29 Meadow View, Letterkenny",
-                            OrderNumber = "ORD-2025-00031",
                             RecipientName = "Erin Doherty",
                             Status = 2,
                             Type = 1,
@@ -1049,7 +1016,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 2,
                             DeliveryDate = new DateTime(2025, 3, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "4 Main Rd, Letterkenny",
-                            OrderNumber = "ORD-2025-00032",
                             RecipientName = "Sophie Gallagher",
                             Status = 2,
                             Type = 1,
@@ -1063,7 +1029,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 5,
                             DeliveryDate = new DateTime(2025, 3, 13, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "9 Park Lane, Cork",
-                            OrderNumber = "ORD-2025-00033",
                             RecipientName = "Lucy Boyle",
                             Status = 2,
                             Type = 1,
@@ -1077,7 +1042,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 10,
                             DeliveryDate = new DateTime(2025, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "6 Hilltop, Donegal",
-                            OrderNumber = "ORD-2025-00034",
                             RecipientName = "Ella Ferry",
                             Status = 2,
                             Type = 1,
@@ -1091,7 +1055,6 @@ namespace PackageDeliverySystem.Migrations
                             CustomerId = 15,
                             DeliveryDate = new DateTime(2025, 3, 17, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Destination = "2 Oakfield, Clare",
-                            OrderNumber = "ORD-2025-00035",
                             RecipientName = "Ruby McBride",
                             Status = 0,
                             Type = 0,
