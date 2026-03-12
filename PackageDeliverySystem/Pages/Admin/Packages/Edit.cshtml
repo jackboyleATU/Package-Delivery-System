@@ -8,7 +8,6 @@
 	<input type="hidden" asp-for="Package.CustomerId" />
 	<input type="hidden" asp-for="Package.OrderNumber" />
 	<input type="hidden" asp-for="Package.Type" />
-	<input type="hidden" asp-for="Package.Status" />
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
 			<h2 action="text-primary pl-3">Update Package</h2>
@@ -49,8 +48,14 @@
 		</div>
 
 		<div class="mb-3">
+			<label asp-for="@Model.Package.AttemptedDeliveries"></label>
+			<input asp-for="@Model.Package.AttemptedDeliveries" type="number" min="0" max="4" class="form-control" />
+			<span asp-validation-for="@Model.Package.AttemptedDeliveries" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
 			<label asp-for="@Model.Package.Status"></label>
-			<select disabled asp-for="@Model.Package.Status" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
+			<select asp-for="@Model.Package.Status" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
 			<span asp-validation-for="@Model.Package.Status" class="text-danger"></span>
 		</div>
 
