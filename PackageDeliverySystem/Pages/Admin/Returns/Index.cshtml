@@ -27,7 +27,6 @@
             <th>Status</th>
             <th>Attempts</th>
             <th style="width:160px;"></th>
-            <th style="width:120px;"></th>
         </tr>
     </thead>
     <tbody>
@@ -53,15 +52,6 @@
                             <input type="hidden" name="id" value="@p.Id" />
                             <button type="submit" class="btn btn-warning btn-sm">
                                 Return to sender
-                            </button>
-                        </form>
-                    </td>
-
-                    <td>
-                        <form method="post" asp-page-handler="Delete" onsubmit="return confirm('Delete this package from the system?');">
-                            <input type="hidden" name="id" value="@p.Id" />
-                            <button type="submit" class="btn btn-danger btn-sm">
-                                Delete
                             </button>
                         </form>
                     </td>
