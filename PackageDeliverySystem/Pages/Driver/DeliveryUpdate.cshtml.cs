@@ -32,7 +32,7 @@ namespace PackageDeliverySystem.Pages.Driver
             {
                 _unitOfWork.PackageRepo.Update(Package);
                 _unitOfWork.Save();
-                return RedirectToPage("Index");
+                return RedirectToPage("DeliveryList");
             }
 
             Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
