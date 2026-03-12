@@ -91,6 +91,33 @@ public static class WebApplicationExtensions
             await userManager.AddToRoleAsync(adminUser, "Admin");
         }
 
+        //Create Driver
+
+        var driverEmail = configuration["SeedDriver:Email"] ?? "SeanM@gmail.com";
+        var driverPassword = configuration["SeedDriver:Password"] ?? "Driver123!";
+
+        var driverUser = await userManager.FindByEmailAsync(driverEmail);
+
+        if (driverUser == null)
+        {
+            driverUser = new IdentityUser
+            {
+                UserName = driverEmail,
+                Email = driverEmail,
+                EmailConfirmed = true
+            };
+            var result = await userManager.CreateAsync(driverUser, driverPassword);
+            if (!result.Succeeded)
+            {
+                // optional: log errors
+                return app;
+            }
+        }
+        if (!await userManager.IsInRoleAsync(driverUser, "Driver"))
+        {
+            await userManager.AddToRoleAsync(driverUser, "Driver");
+        }
+
         return app;
 
     }
