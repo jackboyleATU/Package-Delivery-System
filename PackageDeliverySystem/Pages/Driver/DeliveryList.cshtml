@@ -2,3 +2,40 @@
 @model PackageDeliverySystem.Pages.Driver.DeliveryListModel
 @{
 }
+<div action="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h3 class="text-primary"> Packages </h3>
+		</div>
+		<div class="col-6">
+			<a asp-page="Create" class="btn btn-primary">
+				Create New Package
+			</a>
+		</div>
+	</div>
+</div>
+
+<br />
+
+<table class="table table-bordered table-striped">
+	<thead>
+		<tr>
+			<th>Recipient</th>
+			<th>Destination</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var obj in Model.Packages)
+		{
+				<tr>
+					<td>@obj.RecipientName</td>
+					<td>@obj.Destination</td>
+					<td>@obj.Type</td>
+					<td>
+						<a asp-page="Delete" class="btn btn-danger" asp-route-id="@obj.Id">Update</a>
+					</td>
+				</tr>
+		}
+	</tbody>
+</table>

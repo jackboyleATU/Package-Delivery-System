@@ -65,8 +65,8 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                     Address = "12 Oak Drive, Derry",
                     DateOfBirth = new DateTime(1990, 4, 12),
                     Salary = 35000,
-                    Username = "driver1",
-                    Password = "pass123" 
+                    Username = "SeanM@gmail.com",
+                    Password = "Driver123!" 
                 },
                 new Employee
                 {
@@ -89,8 +89,8 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                     Address = "22 Hillcrest, Dublin",
                     DateOfBirth = new DateTime(1992, 9, 5),
                     Salary = 50000,
-                    Username = "admin1",
-                    Password = "admin123" 
+                    Username = "admin@gmail.com",
+                    Password = "Admin123!" 
                 },
                 new Employee
                 {

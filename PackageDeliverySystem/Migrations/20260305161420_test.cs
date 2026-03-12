@@ -11,12 +11,6 @@ namespace PackageDeliverySystem.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
-                name: "AttemptedDeliveries",
-                table: "Packages",
-                type: "int",
-                nullable: false,
-                defaultValue: 0);
 
             migrationBuilder.AddColumn<DateTime>(
                 name: "DeliveryDate",
