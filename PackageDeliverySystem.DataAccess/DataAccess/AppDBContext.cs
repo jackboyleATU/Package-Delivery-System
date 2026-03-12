@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace PackageDeliverySystem.DataAccess.DataAccess
 {
-    public class AppDBContext : IdentityDbContext
+    public class AppDBContext : IdentityDbContext<ApplicationUser>
     {
 
         public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
@@ -52,6 +52,20 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                  .WithMany(c => c.Packages)
                  .HasForeignKey(x => x.CustomerId)
                  .OnDelete(DeleteBehavior.Cascade);
+            });
+
+            // ApplicationUser -> Employee / Customer relationships
+            modelBuilder.Entity<ApplicationUser>(u =>
+            {
+                u.HasOne(x => x.Employee)
+                 .WithMany()
+                 .HasForeignKey(x => x.EmployeeId)
+                 .OnDelete(DeleteBehavior.SetNull);
+
+                u.HasOne(x => x.Customer)
+                 .WithMany()
+                 .HasForeignKey(x => x.CustomerId)
+                 .OnDelete(DeleteBehavior.SetNull);
             });
 
             // Employees (2 Drivers, 2 Admin)

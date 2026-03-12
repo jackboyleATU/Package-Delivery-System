@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PackageDeliverySystem.Models.Models;
@@ -5,6 +6,7 @@ using PackageDeliverySystem.Services;
 
 namespace PackageDeliverySystem.Pages.Admin.Employees
 {
+    [Authorize(Roles = "Admin")]
     public class IndexModel : PageModel
     {
         public IEnumerable<Employee> Employees { get; set; }
@@ -15,7 +17,6 @@ namespace PackageDeliverySystem.Pages.Admin.Employees
         {
             _unitOfWork = unitOfWork;
         }
-
 
         public void OnGet()
         {
