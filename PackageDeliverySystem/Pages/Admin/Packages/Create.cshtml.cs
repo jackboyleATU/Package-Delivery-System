@@ -43,6 +43,14 @@ namespace PackageDeliverySystem.Pages.Admin.Packages
                 Package.DeliveryDate = DateTime.Now;
             }
 
+            // Enforce server-side: letters are always 3.50 regardless of client input
+            if (Package.Type == Package.PackageType.Letter)
+            {
+                Package.Cost = 3.50;
+                // remove any client-provided value/errors so server value is used for validation
+                ModelState.Remove("Package.Cost");
+            }
+
             if (ModelState.IsValid)
             {
                 if (string.IsNullOrWhiteSpace(Package.OrderNumber))

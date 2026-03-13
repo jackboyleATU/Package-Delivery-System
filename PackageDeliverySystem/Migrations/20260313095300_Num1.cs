@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PackageDeliverySystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Deliver : Migration
+    public partial class Num1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
