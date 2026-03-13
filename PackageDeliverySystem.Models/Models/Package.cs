@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PackageDeliverySystem.Models.Models
 {
@@ -30,7 +26,9 @@ namespace PackageDeliverySystem.Models.Models
 
         public string RecipientName { get; set; }
 
-        public PackageType Type { get; set; }
+        // Make Type nullable so the form can start with the placeholder selected.
+        [Required(ErrorMessage = "Please select a package type.")]
+        public PackageType? Type { get; set; }
 
         public DateTime DeliveryDate { get; set; }
 
