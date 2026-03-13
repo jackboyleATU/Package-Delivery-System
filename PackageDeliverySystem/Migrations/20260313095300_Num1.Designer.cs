@@ -12,7 +12,7 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20260312154402_Num1")]
+    [Migration("20260313095300_Num1")]
     partial class Num1
     {
         /// <inheritdoc />
@@ -517,9 +517,9 @@ namespace PackageDeliverySystem.Migrations
                             Dept = 0,
                             Name = "Sean Murphy",
                             PPS = "1234567AB",
-                            Password = "pass123",
+                            Password = "Driver123!",
                             Salary = 35000.0,
-                            Username = "driver1"
+                            Username = "SeanM@gmail.com"
                         },
                         new
                         {
@@ -541,9 +541,9 @@ namespace PackageDeliverySystem.Migrations
                             Dept = 1,
                             Name = "Patrick Doherty",
                             PPS = "3456789CD",
-                            Password = "admin123",
+                            Password = "Admin123!",
                             Salary = 50000.0,
-                            Username = "admin1"
+                            Username = "admin@gmail.com"
                         },
                         new
                         {

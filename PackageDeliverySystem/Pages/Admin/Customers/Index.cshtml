@@ -22,6 +22,8 @@
 		<tr>
 			<th>Name</th>
 			<th>Address</th>
+			<th>Email</th>
+			<th>Phone No.</th>
 			<th>Packages</th>
 			<th></th>
 			<th></th>
@@ -33,6 +35,8 @@
 			<tr>
 				<td>@obj.Name</td>
 				<td>@obj.Address</td>
+                <td>@obj.Email</td>
+                <td>@obj.PhoneNumber</td>
 				<td>@(obj.Packages?.Count ?? 0)</td>
 				<td>
 					<a asp-page="Edit" class="btn btn-primary" asp-route-id="@obj.Id">Edit</a>

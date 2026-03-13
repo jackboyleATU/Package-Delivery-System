@@ -20,12 +20,12 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.OrderNumber">Order Number</label>
-		<input disabled asp-for="@Model.Package.OrderNumber" class="form-control" placeholder="Leave blank" />
-		<input type="hidden" asp-for="@Model.Package.OrderNumber" />
+			<input disabled asp-for="@Model.Package.OrderNumber" class="form-control" placeholder="Leave blank" />
+			<input type="hidden" asp-for="@Model.Package.OrderNumber" />
 			<span asp-validation-for="@Model.Package.OrderNumber" class="text-danger"></span>
 		</div>
 
-		<div class="mb-3">
+		<div class="mb-3">	
 			<label asp-for="@Model.Package.RecipientName">Recipient</label>
 			<input asp-for="@Model.Package.RecipientName" class="form-control" />
 			<span asp-validation-for="@Model.Package.RecipientName" class="text-danger"></span>
@@ -39,7 +39,7 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Type"></label>
-			<select asp-for="@Model.Package.Type" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
+			<select asp-for="@Model.Package.Type" id="packageType" class="form-select" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
 				<option disabled selected> --Select Package Type--- </option>
 			</select>
 			<span asp-validation-for="@Model.Package.Type" class="text-danger"></span>
@@ -47,21 +47,21 @@
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Status"></label>
-		<select disabled asp-for="@Model.Package.Status" class="form-select" placeholder="Processing" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
-		<input type="hidden" asp-for="@Model.Package.Status" />
+			<select disabled asp-for="@Model.Package.Status" class="form-select" placeholder="Processing" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())"></select>
+			<input type="hidden" asp-for="@Model.Package.Status" />
 			<span asp-validation-for="@Model.Package.Status" class="text-danger"></span>
 		</div>
 
 		<div class="mb-3">
 			<label asp-for="@Model.Package.Cost"></label>
-			<input asp-for="@Model.Package.Cost" type="number" step="0.25" class="form-control" />
+			<input asp-for="@Model.Package.Cost" id="Package_Cost" type="number" step="0.01" class="form-control" />
 			<span asp-validation-for="@Model.Package.Cost" class="text-danger"></span>
 		</div>
 
 		<div hidden class="mb-3">
 			<label asp-for="@Model.Package.DeliveryDate"></label>
-		<input asp-for="@Model.Package.DeliveryDate" type="date" step="0.01" class="form-control" />
-		<input type="hidden" asp-for="@Model.Package.DeliveryDate" />
+			<input asp-for="@Model.Package.DeliveryDate" type="date" step="0.01" class="form-control" />
+			<input type="hidden" asp-for="@Model.Package.DeliveryDate" />
 			<span asp-validation-for="@Model.Package.DeliveryDate" class="text-danger"></span>
 		</div>
 
@@ -74,4 +74,37 @@
 	@{
 		<partial name="_validationScriptsPartial" />
 	}
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			var typeSelect = document.getElementById("packageType");
+			var costInput = document.getElementById("Package_Cost");
+			var LETTER_COST = 3.50;
+
+			function updateCostBehavior() {
+				if (!typeSelect || !costInput) return;
+
+				var val = String(typeSelect.value || '').trim();
+				var isLetter = val === "0" || val.toLowerCase() === "letter";
+
+				if (isLetter) {
+					 // Letter: set fixed cost and lock input (readonly so value posts)
+					costInput.value = LETTER_COST.toFixed(2);
+					costInput.readOnly = true;
+					costInput.classList.add('bg-light');
+				} else {
+					// Parcel: enable input and reset cost back to 0
+					costInput.readOnly = false;
+					costInput.classList.remove('bg-light');
+					// reset to 0.00 when switching to Parcel
+					costInput.value = (0).toFixed(2);
+				}
+			}
+
+			if (typeSelect) {
+				typeSelect.addEventListener("change", updateCostBehavior);
+			}
+			// initialize once (useful after validation errors / when model has value)
+			updateCostBehavior();
+		});
+	</script>
 }
