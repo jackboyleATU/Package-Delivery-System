@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PackageDeliverySystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Addroles : Migration
+    public partial class Num2 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -274,9 +274,9 @@ namespace PackageDeliverySystem.Migrations
                 columns: new[] { "Id", "Address", "DateOfBirth", "Dept", "Name", "PPS", "Password", "Salary", "Username" },
                 values: new object[,]
                 {
-                    { 1, "12 Oak Drive, Derry", new DateTime(1990, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, "Sean Murphy", "1234567AB", "pass123", 35000.0, "driver1" },
+                    { 1, "12 Oak Drive, Derry", new DateTime(1990, 4, 12, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, "Sean Murphy", "1234567AB", "Driver123!", 35000.0, "SeanM@gmail.com" },
                     { 2, "45 Elm Park, Letterkenny", new DateTime(1988, 7, 21, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, "Conor Kelly", "2345678BC", "pass123", 36000.0, "driver2" },
-                    { 3, "22 Hillcrest, Dublin", new DateTime(1992, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Patrick Doherty", "3456789CD", "admin123", 50000.0, "admin1" },
+                    { 3, "22 Hillcrest, Dublin", new DateTime(1992, 9, 5, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Patrick Doherty", "3456789CD", "Admin123!", 50000.0, "admin@gmail.com" },
                     { 4, "7 Meadow View, Derry", new DateTime(1999, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, "Ethan Curran", "4567890DE", "admin123", 52000.0, "admin2" }
                 });
 
