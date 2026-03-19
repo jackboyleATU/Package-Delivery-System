@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Pages.PageViewModels;
 
 namespace PackageDeliverySystem.Pages
@@ -8,13 +9,12 @@ namespace PackageDeliverySystem.Pages
     [BindProperties]
     public class RegisterModel : PageModel
     {
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
         public Register Register { get; set; }
-        //public ApplicationUser ApplicationUser { get; set; }
 
-        public RegisterModel(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public RegisterModel(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -28,12 +28,8 @@ namespace PackageDeliverySystem.Pages
         {
             if (ModelState.IsValid)
             {
-                // var user = new ApplicationUser()
-                var user = new IdentityUser()
+                var user = new ApplicationUser
                 {
-                   // FirstName = Register.FirstName,
-                   // LastName = Register.LastName,
-                    //PhoneNumber = Register.PhoneNumber,
                     UserName = Register.EmailAddress,
                     Email = Register.EmailAddress
                 };
@@ -51,8 +47,6 @@ namespace PackageDeliverySystem.Pages
                     ModelState.AddModelError(String.Empty, error.Description);
             }
             return Page();
-
         }
-
     }
 }

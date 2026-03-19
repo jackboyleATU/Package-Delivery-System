@@ -1,18 +1,19 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Pages.PageViewModels;
 
 namespace PackageDeliverySystem.Pages
 {
     public class LoginModel : PageModel
     {
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
         [BindProperty]
         public Login Login { get; set; }
 
-        public LoginModel(SignInManager<IdentityUser> signInManager)
+        public LoginModel(SignInManager<ApplicationUser> signInManager)
         {
             _signInManager = signInManager;
         }
@@ -25,8 +26,8 @@ namespace PackageDeliverySystem.Pages
         {
             if (ModelState.IsValid)
             {
-                var Result = await _signInManager.PasswordSignInAsync(Login.EmailAddress, Login.Password, Login.RememberMe, false);
-                if (Result.Succeeded)
+                var result = await _signInManager.PasswordSignInAsync(Login.EmailAddress, Login.Password, Login.RememberMe, false);
+                if (result.Succeeded)
                 {
                     return RedirectToPage("Index");
                 }

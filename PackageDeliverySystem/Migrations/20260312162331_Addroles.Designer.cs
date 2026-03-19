@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PackageDeliverySystem.DataAccess.DataAccess;
 
@@ -11,9 +12,11 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260312162331_Addroles")]
+    partial class Addroles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -528,9 +531,9 @@ namespace PackageDeliverySystem.Migrations
                             Dept = 0,
                             Name = "Sean Murphy",
                             PPS = "1234567AB",
-                            Password = "Driver123!",
+                            Password = "pass123",
                             Salary = 35000.0,
-                            Username = "SeanM@gmail.com"
+                            Username = "driver1"
                         },
                         new
                         {
@@ -552,9 +555,9 @@ namespace PackageDeliverySystem.Migrations
                             Dept = 1,
                             Name = "Patrick Doherty",
                             PPS = "3456789CD",
-                            Password = "Admin123!",
+                            Password = "admin123",
                             Salary = 50000.0,
-                            Username = "admin@gmail.com"
+                            Username = "admin1"
                         },
                         new
                         {

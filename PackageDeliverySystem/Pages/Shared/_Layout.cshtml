@@ -1,5 +1,6 @@
 ﻿@using Microsoft.AspNetCore.Identity
-@inject SignInManager<IdentityUser> signInManager
+@using PackageDeliverySystem.Models.Models
+@inject SignInManager<ApplicationUser> signInManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -104,6 +105,15 @@
                         </li> *@
                                 </ul>
                         }
+                        @if (User.IsInRole("Driver"))
+                        {
+                            <ul class="navbar-nav flex-grow-1">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/Driver/Index">Begin Deliveries</a>
+                                </li>
+                            </ul>
+                        }
+
 
                                  <ul class="navbar-nav flex-grow-1 justify-content-end">
                                     <li class="nav-item">
