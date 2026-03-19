@@ -16,7 +16,7 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
         }
 
         [BindProperty]
-        public Package Package { get; set; }
+        public Package Package { get; set; } = new Package();
 
         public SelectList Customers { get; set; }
 
@@ -37,15 +37,22 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
                 ModelState.AddModelError("Package.Weight", "Weight must be a positive number.");
             }
 
+            // Ensure user selected a package type (Type is nullable on the model)
+            if (Package.Type == null)
+            {
+                ModelState.AddModelError("Package.Type", "Please select a package type.");
+            }
+
             if (ModelState.IsValid)
             {
-                Package.Cost = CalculateCost(Package.Type, Package.Weight);
+                // Package.Type is validated non-null above, use .Value to pass non-nullable enum
+                Package.Cost = CalculateCost(Package.Type.Value, Package.Weight);
 
                 // Store temporary data to pass into confirmation page
                 TempData["Package_CustomerId"] = Package.CustomerId;
                 TempData["Package_RecipientName"] = Package.RecipientName;
                 TempData["Package_Destination"] = Package.Destination;
-                TempData["Package_Type"] = (int)Package.Type;
+                TempData["Package_Type"] = (int)Package.Type.Value;
                 TempData["Package_Weight"] = Package.Weight.ToString("R");
                 TempData["Package_DeliveryDate"] = Package.DeliveryDate.ToString("o");
                 TempData["Package_Cost"] = Package.Cost.ToString("R");

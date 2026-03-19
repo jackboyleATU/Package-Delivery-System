@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
+using PackageDeliverySystem.Pages.PageViewModels;
 using PackageDeliverySystem.Services;
+using Stripe;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,6 +36,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 })
 .AddEntityFrameworkStores<AppDBContext>();
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -48,6 +52,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+String key = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+StripeConfiguration.ApiKey = key;
 
 app.UseAuthentication();
 app.UseAuthorization();
@@ -144,7 +151,8 @@ public static class WebApplicationExtensions
 
         if (driverUser == null)
         {
-            driverUser = new IdentityUser
+            // instantiate ApplicationUser (not IdentityUser) because UserManager<ApplicationUser> is used
+            driverUser = new ApplicationUser
             {
                 UserName = driverEmail,
                 Email = driverEmail,
