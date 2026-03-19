@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\CustomerViews\PackageTracking\**" />
+    <Content Remove="Pages\CustomerViews\PackageTracking\**" />
+    <EmbeddedResource Remove="Pages\CustomerViews\PackageTracking\**" />
+    <None Remove="Pages\CustomerViews\PackageTracking\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.24" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.24">
       <PrivateAssets>all</PrivateAssets>
@@ -22,10 +29,6 @@
   <ItemGroup>
     <ProjectReference Include="..\PackageDeliverySystem.DataAccess\PackageDeliverySystem.DataAccess.csproj" />
     <ProjectReference Include="..\PackageDeliverySystem.Services\PackageDeliverySystem.Services.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Pages\CustomerViews\PackageTracking\" />
   </ItemGroup>
 
 </Project>

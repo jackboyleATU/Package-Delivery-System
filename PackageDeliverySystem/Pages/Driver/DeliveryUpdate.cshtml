@@ -2,3 +2,36 @@
 @model PackageDeliverySystem.Pages.Driver.DeliveryUpdateModel
 @{
 }
+<form method="post">
+
+<input type="hidden" asp-for="@Model.Package.Id" />
+<input type="hidden" asp-for="@Model.Package.CustomerId" />
+<input type="hidden" asp-for="@Model.Package.OrderNumber" />
+<input type="hidden" asp-for="@Model.Package.Destination" />
+<input type="hidden" asp-for="@Model.Package.RecipientName" />
+<input type="hidden" asp-for="@Model.Package.DeliveryDate" />
+<input type="hidden" asp-for="@Model.Package.Weight" />
+<input type="hidden" asp-for="@Model.Package.Type" />
+<input type="hidden" asp-for="@Model.Package.Cost" />
+
+<div class="mb-3">
+    <label asp-for="@Model.Package.Status"></label>
+    <select asp-for="@Model.Package.Status" class="form-select"
+            asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageStatus>())">
+    </select>
+</div>
+<div class="mb-3">
+			<label asp-for="@Model.Package.AttemptedDeliveries"></label>
+			<input asp-for="@Model.Package.AttemptedDeliveries" type="number" step="0.01" class="form-control" />
+			<span asp-validation-for="@Model.Package.AttemptedDeliveries" class="text-danger"></span>
+</div>
+
+<button type="submit" class="btn btn-primary">Update</button>
+
+</form>
+
+@section Scripts {
+	@{
+				<partial name="_validationScriptsPartial" />
+	}
+}
