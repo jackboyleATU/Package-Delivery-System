@@ -39,7 +39,7 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 
             if (ModelState.IsValid)
             {
-                Package.Cost = CalculateCost(Package.Type, Package.Weight);
+                Package.Cost = CalculateCost(Package.Type.Value, Package.Weight);
 
                 // Store temporary data to pass into confirmation page
                 TempData["Package_CustomerId"] = Package.CustomerId;

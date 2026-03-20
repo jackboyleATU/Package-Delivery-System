@@ -144,7 +144,7 @@ public static class WebApplicationExtensions
 
         if (driverUser == null)
         {
-            driverUser = new IdentityUser
+            driverUser = new ApplicationUser
             {
                 UserName = driverEmail,
                 Email = driverEmail,
