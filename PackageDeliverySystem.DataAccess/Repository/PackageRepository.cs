@@ -21,5 +21,10 @@ namespace PackageDeliverySystem.DataAccess.Repository
         {
             return _dbContext.Packages.Include(p => p.Customer).ToList();
         }
+
+        public IEnumerable<Package> GetPackagesByCustomer(int userid)
+        {
+            return _dbContext.Packages.Include(p => p.Customer).Where(p => p.Customer.Id == userid).ToList();
+        }
     }
 }

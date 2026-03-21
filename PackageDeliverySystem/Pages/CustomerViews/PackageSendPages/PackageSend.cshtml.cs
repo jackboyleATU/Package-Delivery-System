@@ -1,32 +1,49 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Services;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Identity;
 
 namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 {
+    [Authorize(Roles = "Customer")]
     public class PackageSendModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public PackageSendModel(IUnitOfWork unitOfWork)
+        public PackageSendModel(IUnitOfWork unitOfWork, UserManager<ApplicationUser> userManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
         }
 
         [BindProperty]
         public Package Package { get; set; }
 
-        public SelectList Customers { get; set; }
-
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-            Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
+            var user = await _userManager.GetUserAsync(User);
+            if (user?.CustomerId != null)
+            {
+                Package = new Package { CustomerId = user.CustomerId.Value };
+            }
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
+            var user = await _userManager.GetUserAsync(User);
+            if (user?.CustomerId == null)
+            {
+                return Unauthorized();
+            }
+
+            Package.CustomerId = user.CustomerId.Value;
+            ModelState.Remove("Package.CustomerId");
+
             if (Package.DeliveryDate.Date <= DateTime.Now.Date)
             {
                 ModelState.AddModelError("Package.DeliveryDate", "Delivery date must be a future date.");
@@ -41,7 +58,6 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
             {
                 Package.Cost = CalculateCost(Package.Type, Package.Weight);
 
-                // Store temporary data to pass into confirmation page
                 TempData["Package_CustomerId"] = Package.CustomerId;
                 TempData["Package_RecipientName"] = Package.RecipientName;
                 TempData["Package_Destination"] = Package.Destination;
@@ -53,7 +69,6 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
                 return RedirectToPage("Confirm");
             }
 
-            Customers = new SelectList(_unitOfWork.CustomerRepo.GetAll(), "Id", "Name");
             return Page();
         }
 

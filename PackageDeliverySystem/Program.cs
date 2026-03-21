@@ -18,11 +18,6 @@ builder.Services.AddDbContext<AppDBContext>(options =>
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.LoginPath = "/Login";
-    options.AccessDeniedPath = "/AccessDenied";
-});
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 {
@@ -33,6 +28,12 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
     options.Password.RequireLowercase = false;
 })
 .AddEntityFrameworkStores<AppDBContext>();
+
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Login";
+    options.AccessDeniedPath = "/AccessDenied";
+});
 
 var app = builder.Build();
 
@@ -110,6 +111,41 @@ public static class WebApplicationExtensions
             {
                 foreach (var error in result.Errors)
                     Console.WriteLine($"[Seed] Failed to create user {email}: {error.Description}");
+            }
+        }
+
+        var seededCustomers = db.Customers.ToList();
+        foreach (var customer in seededCustomers)
+        {
+            var email = customer.Email;
+
+            var existing = await userManager.FindByEmailAsync(email);
+            if (existing != null)
+            {
+                // User already exists — ensure the role is still assigned
+                if (!await userManager.IsInRoleAsync(existing, "Customer"))
+                    await userManager.AddToRoleAsync(existing, "Customer");
+                continue;
+            }
+
+            var appUser = new ApplicationUser
+            {
+                UserName = email,
+                Email = email,
+                EmailConfirmed = true,
+                FullName = customer.Name,
+                CustomerId = customer.Id
+            };
+
+            var result = await userManager.CreateAsync(appUser, "Customer123!"); // Use a default password or generate one
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(appUser, "Customer");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                    Console.WriteLine($"[Seed] Failed to create customer user {email}: {error.Description}");
             }
         }
 
