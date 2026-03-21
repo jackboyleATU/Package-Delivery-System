@@ -1,0 +1,203 @@
+﻿@page
+@model PackageDeliverySystem.Pages.CustomerViews.PackageTracking.NumberTrackModel
+@{
+}
+<div class="mt-5">
+	<div class="row mb-4">
+		<div class="col-md-8">
+			<h1 class="text-primary">Track Package</h1>
+		</div>
+		<div class="col-md-4 text-end">
+			<a asp-page="PackageTrack" class="btn btn-secondary">Back to Tracking</a>
+		</div>
+	</div>
+
+	@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+	{
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			<strong>Error:</strong> @Model.ErrorMessage
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+	}
+
+	@if (Model.TrackedPackage != null)
+	{
+		<div class="card shadow-lg mb-4">
+			<div class="card-header bg-primary text-white">
+				<div class="row align-items-center">
+					<div class="col-md-6">
+						<h4 class="mb-0">Order #@Model.TrackedPackage.OrderNumber</h4>
+					</div>
+					<div class="col-md-6 text-end">
+						<span class="badge bg-success fs-6">@Model.TrackedPackage.Status</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card-body bg-light border-bottom">
+				<div class="row text-center py-5">
+					<div class="col-12">
+						<div class="flex-fill mb-2">
+							@if (Model.TrackedPackage.Status.ToString() == "Processing")
+							{
+								<img src="~/images/tracking/processing.png" alt="Processing" class="tracking-icon" />
+
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "AwaitingPickup")
+							{
+								<img src="~/images/tracking/awaitingPickup.png" alt="AwaitingPickup" class="tracking-icon" />
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "InTransit")
+							{
+								<img src="~/images/tracking/inTransit.png" alt="InTransit" class="tracking-icon" />
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "Delivered")
+							{
+								<img src="~/images/tracking/delivered.png" alt="Delivered" class="tracking-icon" />
+							}
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+				@if (Model.TrackedPackage.Status.ToString() == "Processing")
+						{
+							<p class="fw-bold">Processing</p>
+
+						}
+						@if (Model.TrackedPackage.Status.ToString() == "AwaitingPickup")
+						{
+							<p class="fw-bold">Awaiting Pickup</p>
+						}
+						@if (Model.TrackedPackage.Status.ToString() == "InTransit")
+						{
+							<p class="fw-bold">In Transit</p>
+						}
+						@if (Model.TrackedPackage.Status.ToString() == "Delivered")
+						{
+							<p class="fw-bold">Delivered</p>
+						}
+				</div>
+			</div>
+
+			<div class="card-body">
+				<div class="row mb-4">
+					<div class="col-md-6">
+						<h5 class="text-secondary mb-3">Package Information</h5>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Recipient Name:</label>
+							<p>@Model.TrackedPackage.RecipientName</p>
+						</div>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Destination:</label>
+							<p>@Model.TrackedPackage.Destination</p>
+						</div>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Package Type:</label>
+							<p>
+								@if (Model.TrackedPackage.Type.ToString() == "Parcel")
+								{
+									<span class="badge bg-info">Parcel</span>
+									<img src="~/images/packageTypes/parcel.png" alt="Parcel" class="package-icon" />
+								}
+								@if (Model.TrackedPackage.Type.ToString() == "Letter")
+								{
+									<span class="badge bg-info">Letter</span>
+									<img src="~/images/packageTypes/letter.png" alt="Letter" class="package-icon" />
+								}
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h5 class="text-secondary mb-3">Delivery Details</h5>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Weight:</label>
+							<p>@Model.TrackedPackage.Weight kg</p>
+						</div>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Expected Delivery Date:</label>
+							<p>@Model.TrackedPackage.DeliveryDate.ToString("dddd, MMMM dd, yyyy")</p>
+						</div>
+						<div class="mb-3">
+							<label class="form-label fw-bold">Cost:</label>
+							<p>@Model.TrackedPackage.Cost.ToString("F2")</p>
+						</div>
+					</div>
+				</div>
+				
+				<hr />
+
+				<div class="row">
+					<div class="col-md-6">
+						<h5 class="text-secondary mb-3">Delivery Attempts</h5>
+						<div class="progress mb-2" style="height: 25px;">
+							<div class="progress-bar" role="progressbar" style="width: @(Model.TrackedPackage.AttemptedDeliveries * 25)%"
+								aria-valuenow="@Model.TrackedPackage.AttemptedDeliveries" aria-valuemin="0" aria-valuemax="4">
+                                @Model.TrackedPackage.AttemptedDeliveries / 4
+							</div>
+						</div>
+						<small class="text-muted">
+							@if (Model.TrackedPackage.AttemptedDeliveries > 0)
+							{
+								<span>@Model.TrackedPackage.AttemptedDeliveries attempt@(Model.TrackedPackage.AttemptedDeliveries != 1 ? "s" : "") made</span>
+							}
+							else
+							{
+								<span>No delivery attempts yet</span>
+							}
+						</small>
+					</div>
+					<div class="col-md-6">
+						<h5 class="text-secondary mb-3">Status Summary</h5>
+						<p class="mb-0">
+							@if (Model.TrackedPackage.Status.ToString() == "Processing")
+							{
+								<span class="text-success fw-bold">Your package is being processed</span>
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "AwaitingPickup")
+							{
+								<span class="text-success fw-bold">Your package is ready for pickup</span>
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "InTransit")
+							{
+								<span class="text-success fw-bold">Your package is on the way</span>
+							}
+							@if (Model.TrackedPackage.Status.ToString() == "Delivered")
+							{
+								<span class="text-success fw-bold">Your package has been delivered</span>
+							}
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="text-center mt-4">
+			<a asp-page="PackageTrack" class="btn btn-primary btn-lg">Track Another Package</a>
+		</div>
+    }
+	else if (string.IsNullOrEmpty(Model.ErrorMessage))
+	{
+		<div class="alert alert-info" role="alert">
+			No package information available. Please enter a valid order number to track your package.
+		</div>
+    }
+</div>
+
+<style>
+	.tracking-icon {
+		width: 700px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+	.progress {
+		border-radius: 8px;
+		background-color: #e9ecef;
+	}
+	.package-icon {
+		width: 80px;
+		height: 80px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+    }
+</style>
