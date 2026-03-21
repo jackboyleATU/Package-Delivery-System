@@ -11,5 +11,7 @@ namespace PackageDeliverySystem.DataAccess.Repository
     {
         public void Update(Package package);
         public IEnumerable<Package> GetAllWithCustomer();
+
+        public IEnumerable<Package> GetPackagesByCustomer(int userid);
     }
 }

@@ -2,3 +2,37 @@
 @model PackageDeliverySystem.Pages.CustomerViews.PackageTracking.AccountTrackModel
 @{
 }
+<div class="mt-5">
+	<div class="row mb-4">
+		<div class="col-md-8">
+			<h1 class="text-primary">Track Package</h1>
+		</div>
+		<div class="col-md-4 text-end">
+			<a asp-page="PackageTrack" class="btn btn-secondary">Back to Tracking</a>
+		</div>
+	</div>
+
+<br />
+
+    <form method="post" asp-page-handler="">
+        @foreach (var package in Model.Packages)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5>Order #@package.OrderNumber</h5>
+                            <p>To: @package.RecipientName</p>
+                            <p>Status: <span class="badge bg-info">@package.Status</span></p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <button type="submit" class="btn btn-primary" name="OrderNumber" value="@package.OrderNumber">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </form>
+</div>

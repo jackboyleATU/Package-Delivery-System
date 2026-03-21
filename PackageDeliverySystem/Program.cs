@@ -114,6 +114,41 @@ public static class WebApplicationExtensions
             }
         }
 
+        var seededCustomers = db.Customers.ToList();
+        foreach (var customer in seededCustomers)
+        {
+            var email = customer.Email;
+
+            var existing = await userManager.FindByEmailAsync(email);
+            if (existing != null)
+            {
+                // User already exists — ensure the role is still assigned
+                if (!await userManager.IsInRoleAsync(existing, "Customer"))
+                    await userManager.AddToRoleAsync(existing, "Customer");
+                continue;
+            }
+
+            var appUser = new ApplicationUser
+            {
+                UserName = email,
+                Email = email,
+                EmailConfirmed = true,
+                FullName = customer.Name,
+                CustomerId = customer.Id
+            };
+
+            var result = await userManager.CreateAsync(appUser, "Customer123!"); // Use a default password or generate one
+            if (result.Succeeded)
+            {
+                await userManager.AddToRoleAsync(appUser, "Customer");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                    Console.WriteLine($"[Seed] Failed to create customer user {email}: {error.Description}");
+            }
+        }
+
         // Seed the system admin account
         var adminEmail = configuration["SeedAdmin:Email"] ?? "admin@gmail.ie";
         var adminPassword = configuration["SeedAdmin:Password"] ?? "Admin123!";
