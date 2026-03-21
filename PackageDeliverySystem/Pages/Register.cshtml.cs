@@ -48,7 +48,7 @@ namespace PackageDeliverySystem.Pages
                         Name = $"{Register.FirstName} {Register.LastName}",
                         Email = Register.EmailAddress,
                         PhoneNumber = Register.PhoneNumber,
-                        Address = string.Empty
+                        Address = Register.Address
                     };
 
                     _unitOfWork.CustomerRepo.Add(customer);

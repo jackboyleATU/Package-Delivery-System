@@ -56,7 +56,7 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 
             if (ModelState.IsValid)
             {
-                Package.Cost = CalculateCost(Package.Type, Package.Weight);
+                Package.Cost = CalculateCost((Package.PackageType)Package.Type, Package.Weight);
 
                 TempData["Package_CustomerId"] = Package.CustomerId;
                 TempData["Package_RecipientName"] = Package.RecipientName;
