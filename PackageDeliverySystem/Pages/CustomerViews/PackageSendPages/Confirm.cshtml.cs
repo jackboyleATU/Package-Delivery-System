@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Services;
+using Stripe.Checkout;
+using Stripe.Climate;
 
 namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 {
@@ -106,8 +108,50 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
             _unitOfWork.PackageRepo.Add(package);
             _unitOfWork.Save();
 
-            TempData["SuccessMessage"] = "Package sent successfully!";
-            return RedirectToPage("/Index");
+            // Ensure the page-level Package property references the saved package
+            Package = package;
+
+            // Build success/cancel URLs dynamically and include orderId.
+            // Append Stripe's session id placeholder so you can validate the session if needed.
+            var successUrl = Url.Page("/CustomerViews/OrderConfirm", null, new { orderId = package.Id }, Request.Scheme)
+                             + "?session_id={CHECKOUT_SESSION_ID}";
+            var cancelUrl = Url.Page("/CustomerViews/Index", null, null, Request.Scheme);
+
+            var options = new SessionCreateOptions
+            {
+                LineItems = new List<SessionLineItemOptions>
+                {
+                  new SessionLineItemOptions
+                  {
+                      PriceData= new SessionLineItemPriceDataOptions
+                      {
+                          // Use the saved package instance for cost -> cents
+                          UnitAmount = (long)(package.Cost * 100),
+                          Currency="eur",
+                          ProductData = new SessionLineItemPriceDataProductDataOptions
+                          {
+                              Name = "LKPostal Service"
+                          }
+                      },
+
+                    Quantity = 1,
+                  },
+                },
+                PaymentMethodTypes = new List<string>
+                {
+                    "card",
+                },
+
+                Mode = "payment",
+                SuccessUrl = successUrl,
+                CancelUrl = cancelUrl,
+            };
+            var service = new SessionService();
+            Session session = service.Create(options);
+
+            Response.Headers.Add("Location", session.Url);
+            return new StatusCodeResult(303);
+
         }
     }
 }

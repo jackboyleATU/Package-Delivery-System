@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
+using PackageDeliverySystem.Pages.PageViewModels;
 using PackageDeliverySystem.Services;
+using Stripe;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -29,6 +31,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
 })
 .AddEntityFrameworkStores<AppDBContext>();
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Login";
@@ -49,6 +52,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+String key = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
+StripeConfiguration.ApiKey = key;
 
 app.UseAuthentication();
 app.UseAuthorization();
