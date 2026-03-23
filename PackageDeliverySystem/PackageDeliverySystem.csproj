@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\CustomerViews\PackageTracking\**" />
-    <Content Remove="Pages\CustomerViews\PackageTracking\**" />
-    <EmbeddedResource Remove="Pages\CustomerViews\PackageTracking\**" />
-    <None Remove="Pages\CustomerViews\PackageTracking\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.24" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.24">
       <PrivateAssets>all</PrivateAssets>

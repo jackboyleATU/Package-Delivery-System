@@ -62,8 +62,7 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
 
             if (ModelState.IsValid)
             {
-                // Package.Type is validated non-null above, use .Value to pass non-nullable enum
-                Package.Cost = CalculateCost(Package.Type.Value, Package.Weight);
+                Package.Cost = CalculateCost((Package.PackageType)Package.Type, Package.Weight);
 
                 TempData["Package_CustomerId"] = Package.CustomerId;
                 TempData["Package_RecipientName"] = Package.RecipientName;
