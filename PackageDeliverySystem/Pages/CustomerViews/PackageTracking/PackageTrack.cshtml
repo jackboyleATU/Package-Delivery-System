@@ -1,0 +1,21 @@
+﻿@page
+@model PackageDeliverySystem.Pages.CustomerViews.PackageTracking.PackageTrackModel
+@{
+}
+<div class="border p-3 mt-4">
+	<div class="row pb-2">
+		<h2 class="text-primary pl-3">Track Package</h2>
+	</div>
+
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+	<form method="post" asp-page-handler="Number">
+		<div class="mb-3">
+			<label>Order Number:</label>
+			<input class="form-control" asp-for="OrderNumber" />
+			<span asp-validation-for="OrderNumber" class="text-danger"></span>
+		</div>
+		<button type="submit" class="btn btn-primary">Track Package</button>
+		<a asp-page="AccountTrack" class="btn btn-secondary">Track By Account</a>
+	</form>
+</div>
