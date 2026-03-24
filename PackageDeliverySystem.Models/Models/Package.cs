@@ -10,7 +10,8 @@ namespace PackageDeliverySystem.Models.Models
             Processing,
             AwaitingPickup,
             InTransit,
-            Delivered
+            Delivered,
+            ReturnedToSender
         }
 
         public enum PackageType { Letter, Parcel }

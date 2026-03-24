@@ -12,6 +12,7 @@ namespace PackageDeliverySystem.Services
             ICustomerRepository CustomerRepo { get; }
             IEmployeeRepository EmployeeRepo { get; }
             IPackageRepository PackageRepo { get; }
+            ICustomerEmailRepository CustomerEmailRepo { get; }
     
             void Save();
     }

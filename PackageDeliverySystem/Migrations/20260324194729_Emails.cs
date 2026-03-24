@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PackageDeliverySystem.Migrations
 {
     /// <inheritdoc />
-    public partial class Num2 : Migration
+    public partial class Emails : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -153,6 +153,34 @@ namespace PackageDeliverySystem.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CustomerEmails",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CustomerId = table.Column<int>(type: "int", nullable: false),
+                    PackageId = table.Column<int>(type: "int", nullable: false),
+                    Subject = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Body = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SentAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsRead = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CustomerEmails", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CustomerEmails_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_CustomerEmails_Packages_PackageId",
+                        column: x => x.PackageId,
+                        principalTable: "Packages",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
                 name: "AspNetUserClaims",
                 columns: table => new
                 {
@@ -242,31 +270,31 @@ namespace PackageDeliverySystem.Migrations
                 columns: new[] { "Id", "Address", "Email", "Name", "PhoneNumber" },
                 values: new object[,]
                 {
-                    { 1, "12 Hill St, Derry", "emma.oconnor@email.com", "Emma OConnor", "0871234501" },
-                    { 2, "4 Main Rd, Letterkenny", "sophie.gallagher@email.com", "Sophie Gallagher", "0871234502" },
-                    { 3, "8 River Walk, Buncrana", "aoife.kelly@email.com", "Aoife Kelly", "0871234503" },
-                    { 4, "22 Oak Ave, Dublin", "sarah.murphy@email.com", "Sarah Murphy", "0871234504" },
-                    { 5, "9 Park Lane, Cork", "lucy.boyle@email.com", "Lucy Boyle", "0871234505" },
-                    { 6, "1 Green Rd, Galway", "grace.dunne@email.com", "Grace Dunne", "0871234506" },
-                    { 7, "3 Harbour View, Sligo", "mia.quinn@email.com", "Mia Quinn", "0871234507" },
-                    { 8, "7 Meadow Rd, Limerick", "hannah.ward@email.com", "Hannah Ward", "0871234508" },
-                    { 9, "14 Bridge St, Waterford", "chloe.reid@email.com", "Chloe Reid", "0871234509" },
-                    { 10, "6 Hilltop, Donegal", "ella.ferry@email.com", "Ella Ferry", "0871234510" },
-                    { 11, "18 Pine Rd, Armagh", "lily.kane@email.com", "Lily Kane", "0871234511" },
-                    { 12, "5 Cedar Ave, Newry", "zoe.moore@email.com", "Zoe Moore", "0871234512" },
-                    { 13, "11 Glen St, Dundalk", "isla.byrne@email.com", "Isla Byrne", "0871234513" },
-                    { 14, "20 Church Rd, Kilkenny", "freya.sweeney@email.com", "Freya Sweeney", "0871234514" },
-                    { 15, "2 Oakfield, Clare", "ruby.mcbride@email.com", "Ruby McBride", "0871234515" },
-                    { 16, "17 Riverbank, Mayo", "emily.gillen@email.com", "Emily Gillen", "0871234516" },
-                    { 17, "9 Parkview, Wexford", "anna.devlin@email.com", "Anna Devlin", "0871234517" },
-                    { 18, "13 Main St, Monaghan", "kate.curran@email.com", "Kate Curran", "0871234518" },
-                    { 19, "15 Hillcrest, Derry", "olivia.obrien@email.com", "Olivia OBrien", "0871234519" },
-                    { 20, "19 Oak Rd, Strabane", "ava.mclaughlin@email.com", "Ava McLaughlin", "0871234520" },
-                    { 21, "21 Harbour St, Galway", "molly.gallagher@email.com", "Molly Gallagher", "0871234521" },
-                    { 22, "23 Station Rd, Cork", "evie.kelly@email.com", "Evie Kelly", "0871234522" },
-                    { 23, "25 Glen Rd, Dublin", "niamh.murphy@email.com", "Niamh Murphy", "0871234523" },
-                    { 24, "27 Bridge Ave, Sligo", "clara.boyle@email.com", "Clara Boyle", "0871234524" },
-                    { 25, "29 Meadow View, Letterkenny", "erin.doherty@email.com", "Erin Doherty", "0871234525" }
+                    { 1, "12 Hill St, Derry", "emma.oconnor@email.ie", "Emma OConnor", "0871234501" },
+                    { 2, "4 Main Rd, Letterkenny", "sophie.gallagher@email.ie", "Sophie Gallagher", "0871234502" },
+                    { 3, "8 River Walk, Buncrana", "aoife.kelly@email.ie", "Aoife Kelly", "0871234503" },
+                    { 4, "22 Oak Ave, Dublin", "sarah.murphy@email.ie", "Sarah Murphy", "0871234504" },
+                    { 5, "9 Park Lane, Cork", "lucy.boyle@email.ie", "Lucy Boyle", "0871234505" },
+                    { 6, "1 Green Rd, Galway", "grace.dunne@email.ie", "Grace Dunne", "0871234506" },
+                    { 7, "3 Harbour View, Sligo", "mia.quinn@email.ie", "Mia Quinn", "0871234507" },
+                    { 8, "7 Meadow Rd, Limerick", "hannah.ward@email.ie", "Hannah Ward", "0871234508" },
+                    { 9, "14 Bridge St, Waterford", "chloe.reid@email.ie", "Chloe Reid", "0871234509" },
+                    { 10, "6 Hilltop, Donegal", "ella.ferry@email.ie", "Ella Ferry", "0871234510" },
+                    { 11, "18 Pine Rd, Armagh", "lily.kane@email.ie", "Lily Kane", "0871234511" },
+                    { 12, "5 Cedar Ave, Newry", "zoe.moore@email.ie", "Zoe Moore", "0871234512" },
+                    { 13, "11 Glen St, Dundalk", "isla.byrne@email.ie", "Isla Byrne", "0871234513" },
+                    { 14, "20 Church Rd, Kilkenny", "freya.sweeney@email.ie", "Freya Sweeney", "0871234514" },
+                    { 15, "2 Oakfield, Clare", "ruby.mcbride@email.ie", "Ruby McBride", "0871234515" },
+                    { 16, "17 Riverbank, Mayo", "emily.gillen@email.ie", "Emily Gillen", "0871234516" },
+                    { 17, "9 Parkview, Wexford", "anna.devlin@email.ie", "Anna Devlin", "0871234517" },
+                    { 18, "13 Main St, Monaghan", "kate.curran@email.ie", "Kate Curran", "0871234518" },
+                    { 19, "15 Hillcrest, Derry", "olivia.obrien@email.ie", "Olivia OBrien", "0871234519" },
+                    { 20, "19 Oak Rd, Strabane", "ava.mclaughlin@email.ie", "Ava McLaughlin", "0871234520" },
+                    { 21, "21 Harbour St, Galway", "molly.gallagher@email.ie", "Molly Gallagher", "0871234521" },
+                    { 22, "23 Station Rd, Cork", "evie.kelly@email.ie", "Evie Kelly", "0871234522" },
+                    { 23, "25 Glen Rd, Dublin", "niamh.murphy@email.ie", "Niamh Murphy", "0871234523" },
+                    { 24, "27 Bridge Ave, Sligo", "clara.boyle@email.ie", "Clara Boyle", "0871234524" },
+                    { 25, "29 Meadow View, Letterkenny", "erin.doherty@email.ie", "Erin Doherty", "0871234525" }
                 });
 
             migrationBuilder.InsertData(
@@ -372,6 +400,16 @@ namespace PackageDeliverySystem.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CustomerEmails_CustomerId",
+                table: "CustomerEmails",
+                column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CustomerEmails_PackageId",
+                table: "CustomerEmails",
+                column: "PackageId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Employees_PPS",
                 table: "Employees",
                 column: "PPS",
@@ -408,7 +446,7 @@ namespace PackageDeliverySystem.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Packages");
+                name: "CustomerEmails");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -417,10 +455,13 @@ namespace PackageDeliverySystem.Migrations
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "Customers");
+                name: "Packages");
 
             migrationBuilder.DropTable(
                 name: "Employees");
+
+            migrationBuilder.DropTable(
+                name: "Customers");
         }
     }
 }

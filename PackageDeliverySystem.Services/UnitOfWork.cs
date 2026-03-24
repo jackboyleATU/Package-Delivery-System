@@ -16,6 +16,7 @@ namespace PackageDeliverySystem.Services
         public ICustomerRepository CustomerRepo { get; private set; }
         public IEmployeeRepository EmployeeRepo { get; private set; }
         public IPackageRepository PackageRepo { get; private set; }
+        public ICustomerEmailRepository CustomerEmailRepo { get; private set; }
 
         public UnitOfWork(AppDBContext dbContext)
         {
@@ -23,6 +24,7 @@ namespace PackageDeliverySystem.Services
             CustomerRepo = new CustomerRepository(_dbContext);
             EmployeeRepo = new EmployeeRepository(_dbContext);
             PackageRepo = new PackageRepository(_dbContext);
+            CustomerEmailRepo = new CustomerEmailRepository(_dbContext);
         }
 
         public void Dispose()
