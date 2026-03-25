@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
 using PackageDeliverySystem.Services;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,9 @@ builder.Services.ConfigureApplicationCookie(options =>
 });
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+// Configure Stripe API key
+StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 var app = builder.Build();
 
