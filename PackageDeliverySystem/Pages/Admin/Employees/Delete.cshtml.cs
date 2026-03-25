@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using PackageDeliverySystem.Models.Models;
@@ -5,34 +6,52 @@ using PackageDeliverySystem.Services;
 
 namespace PackageDeliverySystem.Pages.Admin.Employees
 {
+    [BindProperties]
     public class DeleteModel : PageModel
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly UserManager<ApplicationUser> _userManager;
 
-        public DeleteModel(IUnitOfWork unitOfWork)
+        public Employee Employee { get; set; }
+
+        public DeleteModel(IUnitOfWork unitOfWork, UserManager<ApplicationUser> userManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
         }
 
-        [BindProperty]
-        public Employee Employee { get; set; }
-        
-        public void OnGet(int id)
+        public IActionResult OnGet(int id)
         {
             Employee = _unitOfWork.EmployeeRepo.Get(id);
+            if (Employee == null)
+                return NotFound();
+
+            return Page();
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPost(int id)
         {
-            if (Employee?.Id > 0)
+            var employee = _unitOfWork.EmployeeRepo.Get(id);
+            if (employee == null)
+                return NotFound();
+
+            // Find and delete the associated ApplicationUser
+            var applicationUser = await _userManager.FindByIdAsync(id.ToString());
+            if (applicationUser != null)
             {
-                var employeeToDelete = _unitOfWork.EmployeeRepo.Get(Employee.Id);
-                if (employeeToDelete != null)
+                var result = await _userManager.DeleteAsync(applicationUser);
+                if (!result.Succeeded)
                 {
-                    _unitOfWork.EmployeeRepo.Delete(employeeToDelete);
-                    _unitOfWork.Save();
+                    foreach (var error in result.Errors)
+                        ModelState.AddModelError(string.Empty, error.Description);
+                    return Page();
                 }
             }
+
+            // Delete the employee record
+            _unitOfWork.EmployeeRepo.Delete(employee);
+            _unitOfWork.Save();
+
             return RedirectToPage("Index");
         }
     }

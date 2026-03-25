@@ -10,24 +10,24 @@
 		</div>
 
 		<div class="mb-3">
-			<label asp-for="@Model.Customer.Name"></label>
-			<input asp-for="@Model.Customer.Name" class="form-control" />
+			<label asp-for="Customer.Name"></label>
+			<input asp-for="Customer.Name" class="form-control" />
+			<span asp-validation-for="Customer.Name" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="@Model.Customer.Address"></label>
-			<input asp-for="@Model.Customer.Address" class="form-control" />
+			<label asp-for="Customer.PhoneNumber"></label>
+			<input asp-for="Customer.PhoneNumber" class="form-control" />
+			<span asp-validation-for="Customer.PhoneNumber" class="text-danger"></span>
+		</div>
+		<div>
+			<label asp-for="Customer.Address"></label>
+			<input asp-for="Customer.Address" class="form-control" />
+			<span asp-validation-for="Customer.Address" class="text-danger"></span>
 		</div>
 		<div class="mb-3">
-			<label asp-for="@Model.Customer.Email"></label>
-            <input asp-for="@Model.Customer.Email" class="form-control" />
-		</div>
-		<div class="mb-3">
-			<label asp-for="@Model.Customer.PhoneNumber"></label>
-            <input asp-for="@Model.Customer.PhoneNumber" class="form-control" />
-		</div>
-		<div hidden class="mb-3">
-			<label asp-for="@Model.Customer.Packages"></label>
-			<input asp-for="@Model.Customer.Packages" class="form-control" />
+			<label asp-for="Customer.Email"></label>
+			<input asp-for="Customer.Email" class="form-control" />
+			<span asp-validation-for="Customer.Email" class="text-danger"></span>
 		</div>
 
 		<button type="submit" class="btn btn-primary">Update</button>
