@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
+using PackageDeliverySystem.Pages.PageViewModels;
 using PackageDeliverySystem.Services;
 using Stripe;
 
@@ -16,6 +17,8 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDBContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Login";
@@ -24,7 +27,6 @@ builder.Services.ConfigureApplicationCookie(options =>
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-// Configure Stripe API key
 StripeConfiguration.ApiKey = builder.Configuration["Stripe:SecretKey"];
 
 var app = builder.Build();
@@ -192,7 +194,7 @@ using (var scope = app.Services.CreateScope())
                     Body =
 $@"Dear {customer.Name},
 
-Your package has been returned to sender because 3 or more delivery attempts were unsuccessful.
+Your package is being returned to you address because 3 or more delivery attempts were unsuccessful.
 
 Package Details:
 Order Number: {package.OrderNumber}
@@ -205,10 +207,12 @@ Cost: €{package.Cost:F2}
 Attempted Deliveries: {package.AttemptedDeliveries}
 Current Status: {Package.PackageStatus.ReturnedToSender}
 
+Your Package cost has been refunded to the credit card used for payment. You can place a new order at any time.
+
 Please contact support if you need any further help.
 
 Regards,
-Admin",
+LK Post",
                     SentAt = DateTime.Now,
                     IsRead = false
                 });
