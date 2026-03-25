@@ -68,6 +68,22 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                  .OnDelete(DeleteBehavior.SetNull);
             });
 
+            modelBuilder.Entity<CustomerEmail>(e =>
+            {
+                e.Property(x => x.Subject).IsRequired().HasMaxLength(200);
+                e.Property(x => x.Body).IsRequired();
+
+                e.HasOne(x => x.Customer)
+                 .WithMany()
+                 .HasForeignKey(x => x.CustomerId)
+                 .OnDelete(DeleteBehavior.NoAction);
+
+                e.HasOne(x => x.Package)
+                 .WithMany()
+                 .HasForeignKey(x => x.PackageId)
+                 .OnDelete(DeleteBehavior.NoAction);
+            });
+
             // Employees (2 Drivers, 2 Admin)
             modelBuilder.Entity<Employee>().HasData(
                 new Employee
@@ -79,7 +95,7 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
                     Address = "12 Oak Drive, Derry",
                     DateOfBirth = new DateTime(1990, 4, 12),
                     Salary = 35000,
-                    Username = "SeanM@gmail.com",
+                    Username = "SeanM@gmail.ie",
                     Password = "Driver123!" 
                 },
                 new Employee
@@ -122,31 +138,31 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
 
             // Customers (25)
             modelBuilder.Entity<Customer>().HasData(
-                new Customer { Id = 1,  Name = "Emma OConnor",     Address = "12 Hill St, Derry",              PhoneNumber = "0871234501", Email = "emma.oconnor@email.com" },
-                new Customer { Id = 2,  Name = "Sophie Gallagher", Address = "4 Main Rd, Letterkenny",         PhoneNumber = "0871234502", Email = "sophie.gallagher@email.com" },
-                new Customer { Id = 3,  Name = "Aoife Kelly",      Address = "8 River Walk, Buncrana",         PhoneNumber = "0871234503", Email = "aoife.kelly@email.com" },
-                new Customer { Id = 4,  Name = "Sarah Murphy",     Address = "22 Oak Ave, Dublin",             PhoneNumber = "0871234504", Email = "sarah.murphy@email.com" },
-                new Customer { Id = 5,  Name = "Lucy Boyle",       Address = "9 Park Lane, Cork",              PhoneNumber = "0871234505", Email = "lucy.boyle@email.com" },
-                new Customer { Id = 6,  Name = "Grace Dunne",      Address = "1 Green Rd, Galway",             PhoneNumber = "0871234506", Email = "grace.dunne@email.com" },
-                new Customer { Id = 7,  Name = "Mia Quinn",        Address = "3 Harbour View, Sligo",          PhoneNumber = "0871234507", Email = "mia.quinn@email.com" },
-                new Customer { Id = 8,  Name = "Hannah Ward",      Address = "7 Meadow Rd, Limerick",          PhoneNumber = "0871234508", Email = "hannah.ward@email.com" },
-                new Customer { Id = 9,  Name = "Chloe Reid",       Address = "14 Bridge St, Waterford",        PhoneNumber = "0871234509", Email = "chloe.reid@email.com" },
-                new Customer { Id = 10, Name = "Ella Ferry",       Address = "6 Hilltop, Donegal",             PhoneNumber = "0871234510", Email = "ella.ferry@email.com" },
-                new Customer { Id = 11, Name = "Lily Kane",        Address = "18 Pine Rd, Armagh",             PhoneNumber = "0871234511", Email = "lily.kane@email.com" },
-                new Customer { Id = 12, Name = "Zoe Moore",        Address = "5 Cedar Ave, Newry",             PhoneNumber = "0871234512", Email = "zoe.moore@email.com" },
-                new Customer { Id = 13, Name = "Isla Byrne",       Address = "11 Glen St, Dundalk",            PhoneNumber = "0871234513", Email = "isla.byrne@email.com" },
-                new Customer { Id = 14, Name = "Freya Sweeney",    Address = "20 Church Rd, Kilkenny",         PhoneNumber = "0871234514", Email = "freya.sweeney@email.com" },
-                new Customer { Id = 15, Name = "Ruby McBride",     Address = "2 Oakfield, Clare",              PhoneNumber = "0871234515", Email = "ruby.mcbride@email.com" },
-                new Customer { Id = 16, Name = "Emily Gillen",     Address = "17 Riverbank, Mayo",             PhoneNumber = "0871234516", Email = "emily.gillen@email.com" },
-                new Customer { Id = 17, Name = "Anna Devlin",      Address = "9 Parkview, Wexford",            PhoneNumber = "0871234517", Email = "anna.devlin@email.com" },
-                new Customer { Id = 18, Name = "Kate Curran",      Address = "13 Main St, Monaghan",           PhoneNumber = "0871234518", Email = "kate.curran@email.com" },
-                new Customer { Id = 19, Name = "Olivia OBrien",    Address = "15 Hillcrest, Derry",            PhoneNumber = "0871234519", Email = "olivia.obrien@email.com" },
-                new Customer { Id = 20, Name = "Ava McLaughlin",   Address = "19 Oak Rd, Strabane",            PhoneNumber = "0871234520", Email = "ava.mclaughlin@email.com" },
-                new Customer { Id = 21, Name = "Molly Gallagher",  Address = "21 Harbour St, Galway",          PhoneNumber = "0871234521", Email = "molly.gallagher@email.com" },
-                new Customer { Id = 22, Name = "Evie Kelly",       Address = "23 Station Rd, Cork",            PhoneNumber = "0871234522", Email = "evie.kelly@email.com" },
-                new Customer { Id = 23, Name = "Niamh Murphy",     Address = "25 Glen Rd, Dublin",             PhoneNumber = "0871234523", Email = "niamh.murphy@email.com" },
-                new Customer { Id = 24, Name = "Clara Boyle",      Address = "27 Bridge Ave, Sligo",           PhoneNumber = "0871234524", Email = "clara.boyle@email.com" },
-                new Customer { Id = 25, Name = "Erin Doherty",     Address = "29 Meadow View, Letterkenny",    PhoneNumber = "0871234525", Email = "erin.doherty@email.com" }
+                new Customer { Id = 1,  Name = "Emma OConnor",     Address = "12 Hill St, Derry",              PhoneNumber = "0871234501", Email = "emma.oconnor@gmail.ie" },
+                new Customer { Id = 2,  Name = "Sophie Gallagher", Address = "4 Main Rd, Letterkenny",         PhoneNumber = "0871234502", Email = "sophie.gallagher@gmail.ie" },
+                new Customer { Id = 3,  Name = "Aoife Kelly",      Address = "8 River Walk, Buncrana",         PhoneNumber = "0871234503", Email = "aoife.kelly@gmail.ie" },
+                new Customer { Id = 4,  Name = "Sarah Murphy",     Address = "22 Oak Ave, Dublin",             PhoneNumber = "0871234504", Email = "sarah.murphy@gmail.ie" },
+                new Customer { Id = 5,  Name = "Lucy Boyle",       Address = "9 Park Lane, Cork",              PhoneNumber = "0871234505", Email = "lucy.boyle@gmail.ie" },
+                new Customer { Id = 6,  Name = "Grace Dunne",      Address = "1 Green Rd, Galway",             PhoneNumber = "0871234506", Email = "grace.dunne@gmail.ie" },
+                new Customer { Id = 7,  Name = "Mia Quinn",        Address = "3 Harbour View, Sligo",          PhoneNumber = "0871234507", Email = "mia.quinn@gmail.ie" },
+                new Customer { Id = 8,  Name = "Hannah Ward",      Address = "7 Meadow Rd, Limerick",          PhoneNumber = "0871234508", Email = "hannah.ward@gmail.ie" },
+                new Customer { Id = 9,  Name = "Chloe Reid",       Address = "14 Bridge St, Waterford",        PhoneNumber = "0871234509", Email = "chloe.reid@gmail.ie" },
+                new Customer { Id = 10, Name = "Ella Ferry",       Address = "6 Hilltop, Donegal",             PhoneNumber = "0871234510", Email = "ella.ferry@gmail.ie" },
+                new Customer { Id = 11, Name = "Lily Kane",        Address = "18 Pine Rd, Armagh",             PhoneNumber = "0871234511", Email = "lily.kane@gmail.ie" },
+                new Customer { Id = 12, Name = "Zoe Moore",        Address = "5 Cedar Ave, Newry",             PhoneNumber = "0871234512", Email = "zoe.moore@gmail.ie" },
+                new Customer { Id = 13, Name = "Isla Byrne",       Address = "11 Glen St, Dundalk",            PhoneNumber = "0871234513", Email = "isla.byrne@gmail.ie" },
+                new Customer { Id = 14, Name = "Freya Sweeney",    Address = "20 Church Rd, Kilkenny",         PhoneNumber = "0871234514", Email = "freya.sweeney@gmail.ie" },
+                new Customer { Id = 15, Name = "Ruby McBride",     Address = "2 Oakfield, Clare",              PhoneNumber = "0871234515", Email = "ruby.mcbride@gmail.ie" },
+                new Customer { Id = 16, Name = "Emily Gillen",     Address = "17 Riverbank, Mayo",             PhoneNumber = "0871234516", Email = "emily.gillen@gmail.ie" },
+                new Customer { Id = 17, Name = "Anna Devlin",      Address = "9 Parkview, Wexford",            PhoneNumber = "0871234517", Email = "anna.devlin@gmail.ie" },
+                new Customer { Id = 18, Name = "Kate Curran",      Address = "13 Main St, Monaghan",           PhoneNumber = "0871234518", Email = "kate.curran@gmail.ie" },
+                new Customer { Id = 19, Name = "Olivia OBrien",    Address = "15 Hillcrest, Derry",            PhoneNumber = "0871234519", Email = "olivia.obrien@gmail.ie" },
+                new Customer { Id = 20, Name = "Ava McLaughlin",   Address = "19 Oak Rd, Strabane",            PhoneNumber = "0871234520", Email = "ava.mclaughlin@gmail.ie" },
+                new Customer { Id = 21, Name = "Molly Gallagher",  Address = "21 Harbour St, Galway",          PhoneNumber = "0871234521", Email = "molly.gallagher@gmail.ie" },
+                new Customer { Id = 22, Name = "Evie Kelly",       Address = "23 Station Rd, Cork",            PhoneNumber = "0871234522", Email = "evie.kelly@gmail.ie" },
+                new Customer { Id = 23, Name = "Niamh Murphy",     Address = "25 Glen Rd, Dublin",             PhoneNumber = "0871234523", Email = "niamh.murphy@gmail.ie" },
+                new Customer { Id = 24, Name = "Clara Boyle",      Address = "27 Bridge Ave, Sligo",           PhoneNumber = "0871234524", Email = "clara.boyle@gmail.ie" },
+                new Customer { Id = 25, Name = "Erin Doherty",     Address = "29 Meadow View, Letterkenny",    PhoneNumber = "0871234525", Email = "erin.doherty@gmail.ie" }
             );
 
             // Packages (35)
@@ -193,5 +209,6 @@ namespace PackageDeliverySystem.DataAccess.DataAccess
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Package> Packages { get; set; }
+        public DbSet<CustomerEmail> CustomerEmails { get; set; }
     }
 }

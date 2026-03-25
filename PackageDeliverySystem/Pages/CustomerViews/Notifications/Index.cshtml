@@ -1,0 +1,51 @@
+﻿@page
+@model PackageDeliverySystem.Pages.CustomerViews.Notifications.IndexModel
+@{
+    ViewData["Title"] = "Notifications";
+}
+
+<h2 class="mt-4">Notifications</h2>
+
+@if (Model.Emails == null || !Model.Emails.Any())
+{
+    <div class="alert alert-info">You have no notifications.</div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Order Number</th>
+                    <th>Sent At</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var email in Model.Emails)
+                {
+                    <tr>
+                        <td>@email.Subject</td>
+                        <td>@email.Package?.OrderNumber</td>
+                        <td>@email.SentAt.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>
+                            @if (email.IsRead)
+                            {
+                                <span class="badge bg-secondary">Read</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">Unread</span>
+                            }
+                        </td>
+                        <td>
+                            <a asp-page="View" asp-route-id="@email.Id" class="btn btn-primary btn-sm">Open</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}

@@ -1,0 +1,32 @@
+﻿@page "{id:int}"
+@model PackageDeliverySystem.Pages.CustomerViews.Notifications.ViewModel
+@{
+    ViewData["Title"] = "View Notification";
+}
+
+<h2 class="mt-4">Notification</h2>
+
+@if (Model.Email == null)
+{
+    <div class="alert alert-danger">Notification not found.</div>
+}
+else
+{
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h4>@Model.Email.Subject</h4>
+        </div>
+        <div class="card-body">
+            <p><strong>Sent:</strong> @Model.Email.SentAt.ToString("dd/MM/yyyy HH:mm")</p>
+            <p><strong>Customer:</strong> @Model.Email.Customer?.Name</p>
+            <p><strong>Order Number:</strong> @Model.Email.Package?.OrderNumber</p>
+            <p><strong>Status:</strong> @Model.Email.Package?.Status</p>
+            <hr />
+            <pre style="white-space: pre-wrap; font-family: inherit;">@Model.Email.Body</pre>
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <a asp-page="Index" class="btn btn-secondary">Back to Notifications</a>
+    </div>
+}

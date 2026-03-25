@@ -2,181 +2,217 @@
 using Microsoft.EntityFrameworkCore;
 using PackageDeliverySystem.DataAccess.DataAccess;
 using PackageDeliverySystem.Models.Models;
-using PackageDeliverySystem.Pages.PageViewModels;
 using PackageDeliverySystem.Services;
-using Stripe;
-using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddRazorPages();
 
 builder.Services.AddDbContext<AppDBContext>(options =>
-    options.UseSqlServer(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        sqlOptions => sqlOptions.MigrationsAssembly("PackageDeliverySystem"))
-    );
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<AppDBContext>()
+    .AddDefaultTokenProviders();
 
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-{
-    // Relax password rules to allow the seeded plain passwords
-    options.Password.RequireDigit = false;
-    options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireUppercase = false;
-    options.Password.RequireLowercase = false;
-})
-.AddEntityFrameworkStores<AppDBContext>();
-
-builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Login";
     options.AccessDeniedPath = "/AccessDenied";
 });
 
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
-String key = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
-StripeConfiguration.ApiKey = key;
-
 app.UseAuthentication();
 app.UseAuthorization();
-
-await app.CreateRolesAsync(builder.Configuration); // seeding runs after middleware is configured
-
 app.MapRazorPages();
 
-app.Run();
-
-
-public static class WebApplicationExtensions
+using (var scope = app.Services.CreateScope())
 {
-    public static async Task<WebApplication> CreateRolesAsync(this WebApplication app, IConfiguration configuration)
+    var services = scope.ServiceProvider;
+
+    var context = services.GetRequiredService<AppDBContext>();
+    var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+
+    context.Database.Migrate();
+
+    string[] roles = { "Admin", "Driver", "Customer" };
+
+    foreach (var role in roles)
     {
-        using var scope = app.Services.CreateScope();
-        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-        var userManager = scope.ServiceProvider.GetRequiredService<UserManager<ApplicationUser>>();
-        var db = scope.ServiceProvider.GetRequiredService<AppDBContext>();
-    
-        // Ensure all roles exist
-        var roles = configuration.GetSection("Roles").Get<List<string>>();
-        foreach (var role in roles)
+        if (!await roleManager.RoleExistsAsync(role))
         {
-            if (!await roleManager.RoleExistsAsync(role))
-                await roleManager.CreateAsync(new IdentityRole(role));
+            await roleManager.CreateAsync(new IdentityRole(role));
         }
+    }
 
-        // Seed Identity accounts for all seeded employees
-        var seededEmployees = db.Employees.ToList();
-        foreach (var employee in seededEmployees)
+    // Seed employee login accounts
+    var employees = context.Employees.ToList();
+
+    foreach (var employee in employees)
+    {
+        var email = employee.Username.Contains("@")
+            ? employee.Username
+            : employee.Username + "@gmail.ie";
+
+        var existingEmployeeUser = await userManager.FindByEmailAsync(email);
+
+        if (existingEmployeeUser == null)
         {
-            var email = employee.Username + "@gmail.ie";
-            var roleName = employee.Dept == Employee.Department.Admin ? "Admin" : "Driver";
-
-            var existing = await userManager.FindByEmailAsync(email);
-            if (existing != null)
-            {
-                // User already exists — ensure the role is still assigned
-                if (!await userManager.IsInRoleAsync(existing, roleName))
-                    await userManager.AddToRoleAsync(existing, roleName);
-                continue;
-            }
-
-            var appUser = new ApplicationUser
+            var employeeUser = new ApplicationUser
             {
                 UserName = email,
                 Email = email,
-                EmailConfirmed = true,
-                FullName = employee.Name,
-                EmployeeId = employee.Id
+                EmailConfirmed = true
             };
 
-            var result = await userManager.CreateAsync(appUser, employee.Password);
+            var result = await userManager.CreateAsync(employeeUser, "Password123!");
+
             if (result.Succeeded)
             {
-                await userManager.AddToRoleAsync(appUser, roleName);
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                    Console.WriteLine($"[Seed] Failed to create user {email}: {error.Description}");
+                string roleName = email.ToLower().Contains("admin") ? "Admin" : "Driver";
+
+                if (await roleManager.RoleExistsAsync(roleName))
+                {
+                    await userManager.AddToRoleAsync(employeeUser, roleName);
+                }
             }
         }
+    }
 
-        var seededCustomers = db.Customers.ToList();
-        foreach (var customer in seededCustomers)
+    // Seed customer login accounts from seeded Customers table
+    var customers = context.Customers.ToList();
+
+    foreach (var customer in customers)
+    {
+        if (string.IsNullOrWhiteSpace(customer.Email))
         {
-            var email = customer.Email;
+            continue;
+        }
 
-            var existing = await userManager.FindByEmailAsync(email);
-            if (existing != null)
-            {
-                // User already exists — ensure the role is still assigned
-                if (!await userManager.IsInRoleAsync(existing, "Customer"))
-                    await userManager.AddToRoleAsync(existing, "Customer");
-                continue;
-            }
+        var existingCustomerUser = await userManager.FindByEmailAsync(customer.Email);
 
-            var appUser = new ApplicationUser
+        if (existingCustomerUser == null)
+        {
+            var customerUser = new ApplicationUser
             {
-                UserName = email,
-                Email = email,
+                UserName = customer.Email,
+                Email = customer.Email,
                 EmailConfirmed = true,
-                FullName = customer.Name,
                 CustomerId = customer.Id
             };
 
-            var result = await userManager.CreateAsync(appUser, "Customer123!"); // Use a default password or generate one
+            var result = await userManager.CreateAsync(customerUser, "Customer123!");
+
             if (result.Succeeded)
             {
-                await userManager.AddToRoleAsync(appUser, "Customer");
-            }
-            else
-            {
-                foreach (var error in result.Errors)
-                    Console.WriteLine($"[Seed] Failed to create customer user {email}: {error.Description}");
+                await userManager.AddToRoleAsync(customerUser, "Customer");
             }
         }
-
-        // Seed the system admin account
-        var adminEmail = configuration["SeedAdmin:Email"] ?? "admin@gmail.ie";
-        var adminPassword = configuration["SeedAdmin:Password"] ?? "Admin123!";
-
-        var adminUser = await userManager.FindByEmailAsync(adminEmail);
-        if (adminUser == null)
+        else
         {
-            adminUser = new ApplicationUser
+            var needsUpdate = false;
+
+            if (existingCustomerUser.CustomerId != customer.Id)
             {
-                UserName = adminEmail,
-                Email = adminEmail,
-                EmailConfirmed = true,
-                FullName = "System Admin"
-            };
-            var result = await userManager.CreateAsync(adminUser, adminPassword);
-            if (!result.Succeeded)
-                return app;
+                existingCustomerUser.CustomerId = customer.Id;
+                needsUpdate = true;
+            }
+
+            if (existingCustomerUser.UserName != customer.Email)
+            {
+                existingCustomerUser.UserName = customer.Email;
+                needsUpdate = true;
+            }
+
+            if (existingCustomerUser.Email != customer.Email)
+            {
+                existingCustomerUser.Email = customer.Email;
+                needsUpdate = true;
+            }
+
+            if (!existingCustomerUser.EmailConfirmed)
+            {
+                existingCustomerUser.EmailConfirmed = true;
+                needsUpdate = true;
+            }
+
+            if (needsUpdate)
+            {
+                await userManager.UpdateAsync(existingCustomerUser);
+            }
+
+            if (!await userManager.IsInRoleAsync(existingCustomerUser, "Customer"))
+            {
+                await userManager.AddToRoleAsync(existingCustomerUser, "Customer");
+            }
         }
-
-        if (!await userManager.IsInRoleAsync(adminUser, "Admin"))
-            await userManager.AddToRoleAsync(adminUser, "Admin");
-
-        return app;
     }
+
+    // Auto-create notifications for seeded packages that already have 3+ failed deliveries
+    var packages = context.Packages.ToList();
+
+    foreach (var package in packages.Where(p => p.AttemptedDeliveries >= 3))
+    {
+        var alreadyExists = context.CustomerEmails
+            .Any(e => e.PackageId == package.Id && e.CustomerId == package.CustomerId);
+
+        if (!alreadyExists)
+        {
+            var customer = context.Customers.FirstOrDefault(c => c.Id == package.CustomerId);
+
+            if (customer != null)
+            {
+                if (package.Status != Package.PackageStatus.ReturnedToSender)
+                {
+                    package.Status = Package.PackageStatus.ReturnedToSender;
+                }
+
+                context.CustomerEmails.Add(new CustomerEmail
+                {
+                    CustomerId = customer.Id,
+                    PackageId = package.Id,
+                    Subject = $"Returned to Sender - {package.OrderNumber}",
+                    Body =
+$@"Dear {customer.Name},
+
+Your package has been returned to sender because 3 or more delivery attempts were unsuccessful.
+
+Package Details:
+Order Number: {package.OrderNumber}
+Recipient Name: {package.RecipientName}
+Destination: {package.Destination}
+Package Type: {package.Type}
+Delivery Date: {package.DeliveryDate:dd/MM/yyyy}
+Weight: {package.Weight} kg
+Cost: €{package.Cost:F2}
+Attempted Deliveries: {package.AttemptedDeliveries}
+Current Status: {Package.PackageStatus.ReturnedToSender}
+
+Please contact support if you need any further help.
+
+Regards,
+Admin",
+                    SentAt = DateTime.Now,
+                    IsRead = false
+                });
+            }
+        }
+    }
+
+    await context.SaveChangesAsync();
 }
+
+app.Run();

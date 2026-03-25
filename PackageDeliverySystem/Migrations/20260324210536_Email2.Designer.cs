@@ -12,8 +12,8 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    [Migration("20260319155325_Num2")]
-    partial class Num2
+    [Migration("20260324210536_Email2")]
+    partial class Email2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -272,7 +272,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 1,
                             Address = "12 Hill St, Derry",
-                            Email = "emma.oconnor@email.com",
+                            Email = "emma.oconnor@gmail.ie",
                             Name = "Emma OConnor",
                             PhoneNumber = "0871234501"
                         },
@@ -280,7 +280,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 2,
                             Address = "4 Main Rd, Letterkenny",
-                            Email = "sophie.gallagher@email.com",
+                            Email = "sophie.gallagher@gmail.ie",
                             Name = "Sophie Gallagher",
                             PhoneNumber = "0871234502"
                         },
@@ -288,7 +288,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 3,
                             Address = "8 River Walk, Buncrana",
-                            Email = "aoife.kelly@email.com",
+                            Email = "aoife.kelly@gmail.ie",
                             Name = "Aoife Kelly",
                             PhoneNumber = "0871234503"
                         },
@@ -296,7 +296,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 4,
                             Address = "22 Oak Ave, Dublin",
-                            Email = "sarah.murphy@email.com",
+                            Email = "sarah.murphy@gmail.ie",
                             Name = "Sarah Murphy",
                             PhoneNumber = "0871234504"
                         },
@@ -304,7 +304,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 5,
                             Address = "9 Park Lane, Cork",
-                            Email = "lucy.boyle@email.com",
+                            Email = "lucy.boyle@gmail.ie",
                             Name = "Lucy Boyle",
                             PhoneNumber = "0871234505"
                         },
@@ -312,7 +312,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 6,
                             Address = "1 Green Rd, Galway",
-                            Email = "grace.dunne@email.com",
+                            Email = "grace.dunne@gmail.ie",
                             Name = "Grace Dunne",
                             PhoneNumber = "0871234506"
                         },
@@ -320,7 +320,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 7,
                             Address = "3 Harbour View, Sligo",
-                            Email = "mia.quinn@email.com",
+                            Email = "mia.quinn@gmail.ie",
                             Name = "Mia Quinn",
                             PhoneNumber = "0871234507"
                         },
@@ -328,7 +328,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 8,
                             Address = "7 Meadow Rd, Limerick",
-                            Email = "hannah.ward@email.com",
+                            Email = "hannah.ward@gmail.ie",
                             Name = "Hannah Ward",
                             PhoneNumber = "0871234508"
                         },
@@ -336,7 +336,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 9,
                             Address = "14 Bridge St, Waterford",
-                            Email = "chloe.reid@email.com",
+                            Email = "chloe.reid@gmail.ie",
                             Name = "Chloe Reid",
                             PhoneNumber = "0871234509"
                         },
@@ -344,7 +344,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 10,
                             Address = "6 Hilltop, Donegal",
-                            Email = "ella.ferry@email.com",
+                            Email = "ella.ferry@gmail.ie",
                             Name = "Ella Ferry",
                             PhoneNumber = "0871234510"
                         },
@@ -352,7 +352,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 11,
                             Address = "18 Pine Rd, Armagh",
-                            Email = "lily.kane@email.com",
+                            Email = "lily.kane@gmail.ie",
                             Name = "Lily Kane",
                             PhoneNumber = "0871234511"
                         },
@@ -360,7 +360,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 12,
                             Address = "5 Cedar Ave, Newry",
-                            Email = "zoe.moore@email.com",
+                            Email = "zoe.moore@gmail.ie",
                             Name = "Zoe Moore",
                             PhoneNumber = "0871234512"
                         },
@@ -368,7 +368,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 13,
                             Address = "11 Glen St, Dundalk",
-                            Email = "isla.byrne@email.com",
+                            Email = "isla.byrne@gmail.ie",
                             Name = "Isla Byrne",
                             PhoneNumber = "0871234513"
                         },
@@ -376,7 +376,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 14,
                             Address = "20 Church Rd, Kilkenny",
-                            Email = "freya.sweeney@email.com",
+                            Email = "freya.sweeney@gmail.ie",
                             Name = "Freya Sweeney",
                             PhoneNumber = "0871234514"
                         },
@@ -384,7 +384,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 15,
                             Address = "2 Oakfield, Clare",
-                            Email = "ruby.mcbride@email.com",
+                            Email = "ruby.mcbride@gmail.ie",
                             Name = "Ruby McBride",
                             PhoneNumber = "0871234515"
                         },
@@ -392,7 +392,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 16,
                             Address = "17 Riverbank, Mayo",
-                            Email = "emily.gillen@email.com",
+                            Email = "emily.gillen@gmail.ie",
                             Name = "Emily Gillen",
                             PhoneNumber = "0871234516"
                         },
@@ -400,7 +400,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 17,
                             Address = "9 Parkview, Wexford",
-                            Email = "anna.devlin@email.com",
+                            Email = "anna.devlin@gmail.ie",
                             Name = "Anna Devlin",
                             PhoneNumber = "0871234517"
                         },
@@ -408,7 +408,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 18,
                             Address = "13 Main St, Monaghan",
-                            Email = "kate.curran@email.com",
+                            Email = "kate.curran@gmail.ie",
                             Name = "Kate Curran",
                             PhoneNumber = "0871234518"
                         },
@@ -416,7 +416,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 19,
                             Address = "15 Hillcrest, Derry",
-                            Email = "olivia.obrien@email.com",
+                            Email = "olivia.obrien@gmail.ie",
                             Name = "Olivia OBrien",
                             PhoneNumber = "0871234519"
                         },
@@ -424,7 +424,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 20,
                             Address = "19 Oak Rd, Strabane",
-                            Email = "ava.mclaughlin@email.com",
+                            Email = "ava.mclaughlin@gmail.ie",
                             Name = "Ava McLaughlin",
                             PhoneNumber = "0871234520"
                         },
@@ -432,7 +432,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 21,
                             Address = "21 Harbour St, Galway",
-                            Email = "molly.gallagher@email.com",
+                            Email = "molly.gallagher@gmail.ie",
                             Name = "Molly Gallagher",
                             PhoneNumber = "0871234521"
                         },
@@ -440,7 +440,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 22,
                             Address = "23 Station Rd, Cork",
-                            Email = "evie.kelly@email.com",
+                            Email = "evie.kelly@gmail.ie",
                             Name = "Evie Kelly",
                             PhoneNumber = "0871234522"
                         },
@@ -448,7 +448,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 23,
                             Address = "25 Glen Rd, Dublin",
-                            Email = "niamh.murphy@email.com",
+                            Email = "niamh.murphy@gmail.ie",
                             Name = "Niamh Murphy",
                             PhoneNumber = "0871234523"
                         },
@@ -456,7 +456,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 24,
                             Address = "27 Bridge Ave, Sligo",
-                            Email = "clara.boyle@email.com",
+                            Email = "clara.boyle@gmail.ie",
                             Name = "Clara Boyle",
                             PhoneNumber = "0871234524"
                         },
@@ -464,10 +464,48 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 25,
                             Address = "29 Meadow View, Letterkenny",
-                            Email = "erin.doherty@email.com",
+                            Email = "erin.doherty@gmail.ie",
                             Name = "Erin Doherty",
                             PhoneNumber = "0871234525"
                         });
+                });
+
+            modelBuilder.Entity("PackageDeliverySystem.Models.Models.CustomerEmail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsRead")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("PackageId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SentAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CustomerId");
+
+                    b.HasIndex("PackageId");
+
+                    b.ToTable("CustomerEmails");
                 });
 
             modelBuilder.Entity("PackageDeliverySystem.Models.Models.Employee", b =>
@@ -533,7 +571,7 @@ namespace PackageDeliverySystem.Migrations
                             PPS = "1234567AB",
                             Password = "Driver123!",
                             Salary = 35000.0,
-                            Username = "SeanM@gmail.com"
+                            Username = "SeanM@gmail.ie"
                         },
                         new
                         {
@@ -1182,6 +1220,25 @@ namespace PackageDeliverySystem.Migrations
                     b.Navigation("Customer");
 
                     b.Navigation("Employee");
+                });
+
+            modelBuilder.Entity("PackageDeliverySystem.Models.Models.CustomerEmail", b =>
+                {
+                    b.HasOne("PackageDeliverySystem.Models.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("PackageDeliverySystem.Models.Models.Package", "Package")
+                        .WithMany()
+                        .HasForeignKey("PackageId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Customer");
+
+                    b.Navigation("Package");
                 });
 
             modelBuilder.Entity("PackageDeliverySystem.Models.Models.Package", b =>

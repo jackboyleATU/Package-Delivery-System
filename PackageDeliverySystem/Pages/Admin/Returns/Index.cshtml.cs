@@ -68,21 +68,5 @@ namespace PackageDeliverySystem.Pages.Admin.Returns
             FlashMessage = $"Package has been set to RETURN TO SENDER. It will be sent back to: {pkg.Customer.Name}, {pkg.Customer.Address}.";
             return RedirectToPage();
         }
-
-        public IActionResult OnPostDelete(int id)
-        {
-            var pkg = _unitOfWork.PackageRepo.Get(id);
-            if (pkg == null)
-            {
-                FlashMessage = "Package not found.";
-                return RedirectToPage();
-            }
-
-            _unitOfWork.PackageRepo.Delete(pkg);
-            _unitOfWork.Save();
-
-            FlashMessage = "Package deleted from the system.";
-            return RedirectToPage();
-        }
     }
 }

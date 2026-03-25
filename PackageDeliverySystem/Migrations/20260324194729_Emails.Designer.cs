@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PackageDeliverySystem.DataAccess.DataAccess;
 
@@ -11,9 +12,11 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260324194729_Emails")]
+    partial class Emails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -269,7 +272,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 1,
                             Address = "12 Hill St, Derry",
-                            Email = "emma.oconnor@gmail.ie",
+                            Email = "emma.oconnor@email.ie",
                             Name = "Emma OConnor",
                             PhoneNumber = "0871234501"
                         },
@@ -277,7 +280,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 2,
                             Address = "4 Main Rd, Letterkenny",
-                            Email = "sophie.gallagher@gmail.ie",
+                            Email = "sophie.gallagher@email.ie",
                             Name = "Sophie Gallagher",
                             PhoneNumber = "0871234502"
                         },
@@ -285,7 +288,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 3,
                             Address = "8 River Walk, Buncrana",
-                            Email = "aoife.kelly@gmail.ie",
+                            Email = "aoife.kelly@email.ie",
                             Name = "Aoife Kelly",
                             PhoneNumber = "0871234503"
                         },
@@ -293,7 +296,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 4,
                             Address = "22 Oak Ave, Dublin",
-                            Email = "sarah.murphy@gmail.ie",
+                            Email = "sarah.murphy@email.ie",
                             Name = "Sarah Murphy",
                             PhoneNumber = "0871234504"
                         },
@@ -301,7 +304,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 5,
                             Address = "9 Park Lane, Cork",
-                            Email = "lucy.boyle@gmail.ie",
+                            Email = "lucy.boyle@email.ie",
                             Name = "Lucy Boyle",
                             PhoneNumber = "0871234505"
                         },
@@ -309,7 +312,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 6,
                             Address = "1 Green Rd, Galway",
-                            Email = "grace.dunne@gmail.ie",
+                            Email = "grace.dunne@email.ie",
                             Name = "Grace Dunne",
                             PhoneNumber = "0871234506"
                         },
@@ -317,7 +320,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 7,
                             Address = "3 Harbour View, Sligo",
-                            Email = "mia.quinn@gmail.ie",
+                            Email = "mia.quinn@email.ie",
                             Name = "Mia Quinn",
                             PhoneNumber = "0871234507"
                         },
@@ -325,7 +328,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 8,
                             Address = "7 Meadow Rd, Limerick",
-                            Email = "hannah.ward@gmail.ie",
+                            Email = "hannah.ward@email.ie",
                             Name = "Hannah Ward",
                             PhoneNumber = "0871234508"
                         },
@@ -333,7 +336,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 9,
                             Address = "14 Bridge St, Waterford",
-                            Email = "chloe.reid@gmail.ie",
+                            Email = "chloe.reid@email.ie",
                             Name = "Chloe Reid",
                             PhoneNumber = "0871234509"
                         },
@@ -341,7 +344,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 10,
                             Address = "6 Hilltop, Donegal",
-                            Email = "ella.ferry@gmail.ie",
+                            Email = "ella.ferry@email.ie",
                             Name = "Ella Ferry",
                             PhoneNumber = "0871234510"
                         },
@@ -349,7 +352,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 11,
                             Address = "18 Pine Rd, Armagh",
-                            Email = "lily.kane@gmail.ie",
+                            Email = "lily.kane@email.ie",
                             Name = "Lily Kane",
                             PhoneNumber = "0871234511"
                         },
@@ -357,7 +360,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 12,
                             Address = "5 Cedar Ave, Newry",
-                            Email = "zoe.moore@gmail.ie",
+                            Email = "zoe.moore@email.ie",
                             Name = "Zoe Moore",
                             PhoneNumber = "0871234512"
                         },
@@ -365,7 +368,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 13,
                             Address = "11 Glen St, Dundalk",
-                            Email = "isla.byrne@gmail.ie",
+                            Email = "isla.byrne@email.ie",
                             Name = "Isla Byrne",
                             PhoneNumber = "0871234513"
                         },
@@ -373,7 +376,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 14,
                             Address = "20 Church Rd, Kilkenny",
-                            Email = "freya.sweeney@gmail.ie",
+                            Email = "freya.sweeney@email.ie",
                             Name = "Freya Sweeney",
                             PhoneNumber = "0871234514"
                         },
@@ -381,7 +384,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 15,
                             Address = "2 Oakfield, Clare",
-                            Email = "ruby.mcbride@gmail.ie",
+                            Email = "ruby.mcbride@email.ie",
                             Name = "Ruby McBride",
                             PhoneNumber = "0871234515"
                         },
@@ -389,7 +392,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 16,
                             Address = "17 Riverbank, Mayo",
-                            Email = "emily.gillen@gmail.ie",
+                            Email = "emily.gillen@email.ie",
                             Name = "Emily Gillen",
                             PhoneNumber = "0871234516"
                         },
@@ -397,7 +400,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 17,
                             Address = "9 Parkview, Wexford",
-                            Email = "anna.devlin@gmail.ie",
+                            Email = "anna.devlin@email.ie",
                             Name = "Anna Devlin",
                             PhoneNumber = "0871234517"
                         },
@@ -405,7 +408,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 18,
                             Address = "13 Main St, Monaghan",
-                            Email = "kate.curran@gmail.ie",
+                            Email = "kate.curran@email.ie",
                             Name = "Kate Curran",
                             PhoneNumber = "0871234518"
                         },
@@ -413,7 +416,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 19,
                             Address = "15 Hillcrest, Derry",
-                            Email = "olivia.obrien@gmail.ie",
+                            Email = "olivia.obrien@email.ie",
                             Name = "Olivia OBrien",
                             PhoneNumber = "0871234519"
                         },
@@ -421,7 +424,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 20,
                             Address = "19 Oak Rd, Strabane",
-                            Email = "ava.mclaughlin@gmail.ie",
+                            Email = "ava.mclaughlin@email.ie",
                             Name = "Ava McLaughlin",
                             PhoneNumber = "0871234520"
                         },
@@ -429,7 +432,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 21,
                             Address = "21 Harbour St, Galway",
-                            Email = "molly.gallagher@gmail.ie",
+                            Email = "molly.gallagher@email.ie",
                             Name = "Molly Gallagher",
                             PhoneNumber = "0871234521"
                         },
@@ -437,7 +440,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 22,
                             Address = "23 Station Rd, Cork",
-                            Email = "evie.kelly@gmail.ie",
+                            Email = "evie.kelly@email.ie",
                             Name = "Evie Kelly",
                             PhoneNumber = "0871234522"
                         },
@@ -445,7 +448,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 23,
                             Address = "25 Glen Rd, Dublin",
-                            Email = "niamh.murphy@gmail.ie",
+                            Email = "niamh.murphy@email.ie",
                             Name = "Niamh Murphy",
                             PhoneNumber = "0871234523"
                         },
@@ -453,7 +456,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 24,
                             Address = "27 Bridge Ave, Sligo",
-                            Email = "clara.boyle@gmail.ie",
+                            Email = "clara.boyle@email.ie",
                             Name = "Clara Boyle",
                             PhoneNumber = "0871234524"
                         },
@@ -461,7 +464,7 @@ namespace PackageDeliverySystem.Migrations
                         {
                             Id = 25,
                             Address = "29 Meadow View, Letterkenny",
-                            Email = "erin.doherty@gmail.ie",
+                            Email = "erin.doherty@email.ie",
                             Name = "Erin Doherty",
                             PhoneNumber = "0871234525"
                         });
@@ -568,7 +571,7 @@ namespace PackageDeliverySystem.Migrations
                             PPS = "1234567AB",
                             Password = "Driver123!",
                             Salary = 35000.0,
-                            Username = "SeanM@gmail.ie"
+                            Username = "SeanM@gmail.com"
                         },
                         new
                         {
