@@ -65,7 +65,8 @@ namespace PackageDeliverySystem.Pages.Admin.Returns
             // Modifying its properties is sufficient — calling Save() will persist changes.
             _unitOfWork.Save();
 
-            FlashMessage = $"Package has been set to RETURN TO SENDER. It will be sent back to: {pkg.Customer.Name}, {pkg.Customer.Address}.";
+            FlashMessage = $"Package has been set to RETURN TO SENDER. It will be sent back to: {pkg.Customer.Name}, {pkg.Customer.Address}." +
+                $"Customer has been Notified.";
             return RedirectToPage();
         }
     }
