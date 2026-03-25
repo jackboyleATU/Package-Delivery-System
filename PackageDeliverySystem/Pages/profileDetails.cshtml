@@ -89,6 +89,18 @@
                     }
                   </div>
                   <hr>
+                  @if(@User.IsInRole("Customer") && Model.customer != null)
+                    {
+                    <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone Number</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      @Model.customer?.PhoneNumber
+                    </div>
+                  </div>
+                  <hr>
+                    }
                   @if((@User.IsInRole("Driver") || @User.IsInRole("Admin")) && Model.employee != null)
                   {
                   <div class="row">
@@ -141,7 +153,6 @@
 
 <style>
 body{
-    margin-top:20px;
     color: #1a202c;
     text-align: left;
     background-color: #e2e8f0;    
