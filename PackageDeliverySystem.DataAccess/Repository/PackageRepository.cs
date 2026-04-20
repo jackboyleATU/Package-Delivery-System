@@ -26,5 +26,10 @@ namespace PackageDeliverySystem.DataAccess.Repository
         {
             return _dbContext.Packages.Include(p => p.Customer).Where(p => p.Customer.Id == userid).ToList();
         }
+
+        public IEnumerable<Package> GetAllUnreturned()
+        {
+            return _dbContext.Packages.Where(p => p.Status != Package.PackageStatus.ReturnedToSender).ToList();
+        }
     }
 }

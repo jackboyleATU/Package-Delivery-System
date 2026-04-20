@@ -55,6 +55,10 @@
 							{
 								<img src="~/images/tracking/delivered.png" alt="Delivered" class="tracking-icon" />
 							}
+							@if (Model.TrackedPackage.Status.ToString() == "ReturnedToSender")
+							{
+								<img src="~/images/tracking/delivered.png" alt="Delivered" class="tracking-icon" />
+							}
 						</div>
 					</div>
 				</div>
@@ -75,6 +79,10 @@
 						@if (Model.TrackedPackage.Status.ToString() == "Delivered")
 						{
 							<p class="fw-bold">Delivered</p>
+						}
+						@if (Model.TrackedPackage.Status.ToString() == "ReturnedToSender")
+						{
+							<p class="fw-bold">Returned To Sender</p>
 						}
 				</div>
 			</div>

@@ -13,5 +13,7 @@ namespace PackageDeliverySystem.DataAccess.Repository
         public IEnumerable<Package> GetAllWithCustomer();
 
         public IEnumerable<Package> GetPackagesByCustomer(int userid);
+
+        public IEnumerable<Package> GetAllUnreturned();
     }
 }

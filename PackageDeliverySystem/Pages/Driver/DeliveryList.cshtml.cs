@@ -19,7 +19,7 @@ namespace PackageDeliverySystem.Pages.Driver
 
         public void OnGet()
         {
-            Packages = _unitOfWork.PackageRepo.GetAllWithCustomer();
+            Packages = _unitOfWork.PackageRepo.GetAllUnreturned();
         }
     }
 }
