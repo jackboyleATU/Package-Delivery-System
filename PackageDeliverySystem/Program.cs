@@ -81,7 +81,8 @@ using (var scope = app.Services.CreateScope())
             {
                 UserName = email,
                 Email = email,
-                EmailConfirmed = true
+                EmailConfirmed = true,
+                EmployeeId = employee.Id  // Link to the employee
             };
 
             var result = await userManager.CreateAsync(employeeUser, "Password123!");
@@ -94,6 +95,15 @@ using (var scope = app.Services.CreateScope())
                 {
                     await userManager.AddToRoleAsync(employeeUser, roleName);
                 }
+            }
+        }
+        else
+        {
+            // Update existing employee user to link to employee if not already linked
+            if (existingEmployeeUser.EmployeeId != employee.Id)
+            {
+                existingEmployeeUser.EmployeeId = employee.Id;
+                await userManager.UpdateAsync(existingEmployeeUser);
             }
         }
     }

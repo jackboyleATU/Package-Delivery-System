@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -6,6 +7,7 @@ using PackageDeliverySystem.Services;
 
 namespace PackageDeliverySystem.Pages.Admin.Employees
 {
+    [Authorize(Roles = "Admin")]
     [BindProperties]
     public class EditModel : PageModel
     {
@@ -44,45 +46,13 @@ namespace PackageDeliverySystem.Pages.Admin.Employees
             existingEmployee.Username = Employee.Username;
             existingEmployee.Dept = Employee.Dept;
             existingEmployee.Salary = Employee.Salary;
+            existingEmployee.AssignedRoute = Employee.AssignedRoute;
+            existingEmployee.PPS = Employee.PPS;
+            existingEmployee.Address = Employee.Address;
+            existingEmployee.DateOfBirth = Employee.DateOfBirth;
 
             _unitOfWork.EmployeeRepo.Update(existingEmployee);
             _unitOfWork.Save();
-
-            // Find and update the associated ApplicationUser
-            var applicationUser = await _userManager.FindByIdAsync(existingEmployee.Id.ToString());
-            if (applicationUser != null)
-            {
-                applicationUser.UserName = Employee.Username;
-                applicationUser.FullName = Employee.Name;
-
-                var result = await _userManager.UpdateAsync(applicationUser);
-                if (!result.Succeeded)
-                {
-                    foreach (var error in result.Errors)
-                        ModelState.AddModelError(string.Empty, error.Description);
-                    return Page();
-                }
-
-                // Update password if provided
-                if (!string.IsNullOrEmpty(Password))
-                {
-                    var removePasswordResult = await _userManager.RemovePasswordAsync(applicationUser);
-                    if (!removePasswordResult.Succeeded)
-                    {
-                        foreach (var error in removePasswordResult.Errors)
-                            ModelState.AddModelError(string.Empty, error.Description);
-                        return Page();
-                    }
-
-                    var addPasswordResult = await _userManager.AddPasswordAsync(applicationUser, Password);
-                    if (!addPasswordResult.Succeeded)
-                    {
-                        foreach (var error in addPasswordResult.Errors)
-                            ModelState.AddModelError(string.Empty, error.Description);
-                        return Page();
-                    }
-                }
-            }
 
             return RedirectToPage("Index");
         }

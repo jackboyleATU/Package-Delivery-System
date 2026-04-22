@@ -61,7 +61,8 @@ namespace PackageDeliverySystem.Pages.CustomerViews.PackageSendPages
                 DeliveryDate = (DateTime)TempData["Package_DeliveryDate"]!,
                 Cost = double.Parse(TempData["Package_Cost"] as string ?? "0"),
                 Status = Package.PackageStatus.AwaitingPickup,
-                AttemptedDeliveries = 0
+                AttemptedDeliveries = 0,
+                Route = Package.DeliveryRoute.North  // Assign default or based on destination
             };
             if (string.IsNullOrWhiteSpace(package.OrderNumber))
             {

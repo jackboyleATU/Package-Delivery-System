@@ -11,6 +11,8 @@ namespace PackageDeliverySystem.Models.Models
     {
         public enum Department { Driver, Admin };
 
+        public enum Routes { North, South, West, East, Admin };
+
         [Key]
         public int Id { get; set; }
 
@@ -25,6 +27,8 @@ namespace PackageDeliverySystem.Models.Models
         public string Address { get; set; }
 
         public DateTime DateOfBirth { get; set; }
+
+        public Routes AssignedRoute { get; set; }
 
         [Required]
         public double Salary { get; set; }

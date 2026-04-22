@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PackageDeliverySystem.DataAccess.DataAccess;
 
@@ -11,9 +12,11 @@ using PackageDeliverySystem.DataAccess.DataAccess;
 namespace PackageDeliverySystem.DataAccess.Migrations
 {
     [DbContext(typeof(AppDBContext))]
-    partial class AppDBContextModelSnapshot : ModelSnapshot
+    [Migration("20260422233404_routes2")]
+    partial class routes2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -232,6 +235,24 @@ namespace PackageDeliverySystem.DataAccess.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "08034e8f-5e1f-4cd9-a02f-d716cb7265e6",
+                            Email = "SeanM@gmail.ie",
+                            EmailConfirmed = true,
+                            EmployeeId = 1,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "SEANM@GMAIL.IE",
+                            NormalizedUserName = "SEANM@GMAIL.IE",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "cb9fb606-cc48-4e69-b9e3-20376e4b9349",
+                            TwoFactorEnabled = false,
+                            UserName = "SeanM@gmail.ie"
+                        });
                 });
 
             modelBuilder.Entity("PackageDeliverySystem.Models.Models.Customer", b =>

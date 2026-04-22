@@ -14,6 +14,14 @@ namespace PackageDeliverySystem.Models.Models
             ReturnedToSender
         }
 
+        public enum DeliveryRoute
+        {
+            North,
+            South,
+            West,
+            East
+        }
+
         public enum PackageType { Letter, Parcel }
 
         [Key]
@@ -30,6 +38,9 @@ namespace PackageDeliverySystem.Models.Models
         // Make Type nullable so the form can start with the placeholder selected.
         [Required(ErrorMessage = "Please select a package type.")]
         public PackageType? Type { get; set; }
+
+        [Required(ErrorMessage = "Please select a delivery route.")]
+        public DeliveryRoute? Route { get; set; }
 
         public DateTime DeliveryDate { get; set; }
 

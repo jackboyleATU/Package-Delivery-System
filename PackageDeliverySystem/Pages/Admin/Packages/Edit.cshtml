@@ -40,6 +40,14 @@
 		</div>
 
 		<div class="mb-3">
+			<label asp-for="@Model.Package.Route"></label>
+			<select disabled asp-for="@Model.Package.Route" class="form-control" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.DeliveryRoute>())">
+				<option disabled> --Select Delivery Route--- </option>
+			</select>
+			<span asp-validation-for="@Model.Package.Route" class="text-danger"></span>
+		</div>
+
+		<div class="mb-3">
 			<label asp-for="@Model.Package.Type"></label>
 			<select disabled asp-for="@Model.Package.Type" class="form-control" asp-items="@(Html.GetEnumSelectList<PackageDeliverySystem.Models.Models.Package.PackageType>())">
 				<option disabled> --Select Package Type--- </option>
