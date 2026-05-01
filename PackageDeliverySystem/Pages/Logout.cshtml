@@ -2,22 +2,37 @@
 @model PackageDeliverySystem.Pages.LogoutModel
 @{
 }
-<form method="post">
-	<div class="border p-3 mt-4">
-		<div asp-validation-summary="All" class="text-danger"></div>
-		<div class="row pb-2">
-			<h2 class="text-primary pl-3">
-				Logout
-			</h2>
-		</div>
+<div class="container d-flex justify-content-center align-items-center" style="min-height:70vh;">
 
-		<div class="mb-3">
-			<p> Are you sure you want to logout?</p>
-			<p><button class="btn btn-primary" asp-page-handler="Logout">Yes</button>
-			<p><button class="btn btn-outline-secondary ml-5" asp-page-handler="NoLogout">No</button>
-			</p>
-		</div>
+    <form method="post" class="w-100" style="max-width:420px;">
 
-		</div>
+        <div class="bg-dark text-white rounded-3 shadow p-4 text-center d-flex flex-column">
 
-</form>
+            <div asp-validation-summary="All" class="text-danger mb-2"></div>
+
+            <div class="mb-3">
+                <img src="~/images/homePage/magnifyingGlass.png"
+                     alt="Logout"
+                     style="height:70px;">
+            </div>
+
+            <h4 class="fw-bold text-uppercase mb-2">Logout</h4>
+
+            <p class="text-light small mb-4">
+                Are you sure you want to log out of your account?
+            </p>
+
+            <div class="d-grid gap-2 mt-auto">
+                <button class="btn btn-danger fw-semibold" asp-page-handler="Logout">
+                    Yes, Log Out →
+                </button>
+
+                <button class="btn btn-outline-light" asp-page-handler="NoLogout">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
+
+    </form>
+</div>
